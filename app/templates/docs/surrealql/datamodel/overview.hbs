@@ -110,6 +110,17 @@
 				</tr>
 				<tr>
 					<td>
+						<code>option</code>
+					</td>
+					<td>
+						Makes types optional and guarantees the field to be either empty (NONE), or a number.
+						<ul>
+							<li><code>option{{ "<" }}number></code> </li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<code>string</code>
 					</td>
 					<td>
@@ -137,14 +148,14 @@
 						<a href="https://www.rfc-editor.org/rfc/rfc7946" target="_blank" title="Link to RFC 7946">RFC 7946</a> compliant data type for storing geometry in the <a href="https://geojson.org/" target="_blank" title="Link to the GeoJson website">GeoJson format</a>.
 						<p>Geometric Types include:
 							<ul>
-								<li><code>feature</code></li>
-								<li><code>point</code></li>
-								<li><code>line</code></li>
-								<li><code>polygon</code></li>
-								<li><code>multipoint</code></li>
-								<li><code>multiline</code></li>
-								<li><code>multipolygon</code></li>
-								<li><code>collection</code></li>
+								<li><code>geometry{{ "<" }}feature></code></li>
+								<li><code>geometry{{ "<" }}point></code></li>
+								<li><code>geometry{{ "<" }}line></code></li>
+								<li><code>geometry{{ "<" }}polygon></code></li>
+								<li><code>geometry{{ "<" }}multipoint></code></li>
+								<li><code>geometry{{ "<" }}multiline></code></li>
+								<li><code>geometry{{ "<" }}multipolygon></code></li>
+								<li><code>geometry{{ "<" }}collection></code></li>
 							</ul>
 						</p>
 						<Code @name="docs/surrealql/statements/define/field/geometry-types-field.surql" />
