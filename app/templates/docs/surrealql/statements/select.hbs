@@ -43,6 +43,26 @@
 	</p>
 	<Code @name="docs/surrealql/statements/select/param.surql" />
 
+	<h4>Record ranges</h4>
+	<p>
+		SurrealDB supports the ability to query a range of records, 
+		using the record ID. The record ID ranges, retrieve records using the natural sorting order of the record IDs. 
+		These range queries can be used to query a range of records in a timeseries context. 
+		You can see more here about <Link @link="docs.surrealql.datamodel.ids">array-based Record IDs.</Link>
+	</p>
+	<Code @name="docs-surrealql-overview-record-ranges.surql">
+		-- Select all person records with IDs between the given range
+		SELECT * FROM person:1..1000;
+		-- Select all records for a particular location, inclusive
+		SELECT * FROM temperature:['London', NONE]..=['London', time::now()];
+		-- Select all temperature records with IDs less than a maximum value
+		SELECT * FROM temperature:..['London', '2022-08-29T08:09:31'];
+		-- Select all temperature records with IDs greater than a minimum value
+		SELECT * FROM temperature:['London', '2022-08-29T08:03:39']..;
+		-- Select all temperature records with IDs between the specified range
+		SELECT * FROM temperature:['London', '2022-08-29T08:03:39']..['London', '2022-08-29T08:09:31'];
+	</Code>
+
 	<h4>Skip certain fields using the <code>OMIT</code> clause</h4>
 	<p> Sometimes, especially with tables containing numerous columns, users might wish there was an easier way to select all columns except a few specific ones, with the <code>OMIT</code> clause you can omit certain fields from records as they are output.</p>
 	<Code @name="docs/surrealql/statements/select/omit.surql" />
