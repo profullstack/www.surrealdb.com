@@ -109,6 +109,14 @@
 				</td>
 				<td>Generates and returns a random Version 7 UUID</td>
 			</tr>
+			<tr>
+				<td>
+					<a href="#rand-ulid">
+						<code>rand::ulid()</code>
+					</a>
+				</td>
+				<td>Generates and returns a random ULID</td>
+			</tr>
 		</tbody>
 	</table>
 </Layout::Table>
@@ -451,6 +459,34 @@
 			</Code>
 			<Code @name="docs-surrealql-functions-rand-uuid-v7-result.txt">
 				"01843a54-32e1-71eb-af07-5901fc190877"
+			</Code>
+		</codes>
+		<p>To enable <code>rand::uuid::v7</code> <Link @link="docs.embedding.rust">in embedded mode</Link> you need to add the following to your <code>.cargo/config.toml</code> file in your project</p>
+		<Code @name="docs-surrealql-functions-rand-uuid-v7-embedded.txt">
+			[build]
+			rustflags = ["--cfg", "uuid_unstable"]
+		</Code>
+	</Layout::Text>
+
+</Layout::Group>
+
+<Layout::Gap small />
+
+<Layout::Group {{waypoint "rand-ulid"}}>
+
+	<Layout::Text text-l text-f>
+		<h3>rand::ulid</h3>
+		<p>The <code>rand::ulid</code> function generates a random ULID.</p>
+		<Code @name="docs-surrealql-functions-rand-ulid.surql" text="API Definition">
+			rand::ulid() -> ulid
+		</Code>
+		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
+		<codes vertical>
+			<Code @name="docs-surrealql-functions-rand-ulid-input.surql">
+				RETURN rand::ulid();
+			</Code>
+			<Code @name="docs-surrealql-functions-rand-ulid-result.txt">
+				"01H9QDG81Q7SB33RXB7BEZBK7G"
 			</Code>
 		</codes>
 	</Layout::Text>
