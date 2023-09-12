@@ -1,22 +1,25 @@
 import { Surreal } from 'surrealdb.js';
 
-const db = new Surreal('http://127.0.0.1:8000/rpc', {
-	// Set the namespace and database for the connection
-	ns: 'test',
-	db: 'test',
-
-	// Set the authentication details for the connection
-	auth: {
-		NS: 'test',
-		DB: 'test',
-		SC: 'user',
-		user: 'info@surrealdb.com',
-		pass: 'my-secret-password',
-	},
-});
+const db = new Surreal();
 
 async function main() {
 	try {
+		// Connect to the database
+		await db.connect('http://127.0.0.1:8000/rpc', {
+			// Set the namespace and database for the connection
+			ns: 'test',
+			db: 'test',
+
+			// Set the authentication details for the connection
+			auth: {
+				NS: 'test',
+				DB: 'test',
+				SC: 'user',
+				user: 'info@surrealdb.com',
+				pass: 'my-secret-password',
+			},
+		});
+
 		// Create a new person with a random id
 		const created = await db.create('person', {
 			title: 'Founder & CEO',

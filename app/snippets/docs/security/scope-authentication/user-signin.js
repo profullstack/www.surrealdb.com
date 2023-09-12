@@ -1,4 +1,5 @@
-const db = new Surreal('ws://localhost:8000/rpc', {
+const db = new Surreal();
+db.connect('ws://localhost:8000/rpc', {
 	ns: 'test',
 	db: 'test',
 });

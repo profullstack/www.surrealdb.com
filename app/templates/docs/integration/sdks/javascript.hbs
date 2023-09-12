@@ -59,15 +59,6 @@
 		<tbody>
 			<tr>
 				<td>
-					<a href="#constructor">
-						<Ascua::Prism::Inline @language="ts" @code="Surreal(url, options)" />
-					</a>
-					<l faint r>constructor</l>
-				</td>
-				<td>Connects to a local or remote database endpoint</td>
-			</tr>
-			<tr>
-				<td>
 					<a href="#connect">
 						<Ascua::Prism::Inline @language="ts" @code="async db.connect(url, options)" />
 					</a>
@@ -245,17 +236,6 @@
 		</tbody>
 	</table>
 </Layout::Table>
-
-<Layout::Gap small />
-
-<Layout::Group {{waypoint "constructor"}}>
-
-	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="Surreal(url, options)" /></h3>
-		<p>The <code>constructor</code> function passes on it's arguments to the <a href="#connect"><Ascua::Prism::Inline @language="ts" @code="async db.connect(url, options)" /></a> function.</p>
-	</Layout::Text>
-
-</Layout::Group>
 
 <Layout::Gap small />
 

@@ -1,10 +1,12 @@
 import Surreal from 'surrealdb.wasm';
 
-const db = new Surreal('http://127.0.0.1:8000/rpc');
+const db = new Surreal();
 
 async function main() {
 
 	try {
+		// Connect to the database
+		await db.connect('http://127.0.0.1:8000/rpc');
 
 		// Signin to a scope from the browser
 		await db.signin({

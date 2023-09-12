@@ -1,9 +1,12 @@
 import Surreal from "https://deno.land/x/surrealdb/mod.ts";
 
-const db = new Surreal('http://127.0.0.1:8000/rpc');
+const db = new Surreal();
 
 async function main() {
 	try {
+		// Connect to the database
+		await db.connect('http://127.0.0.1:8000/rpc');
+
 		// Signin as a namespace, database, or root user
 		await db.signin({
 			user: 'root',
