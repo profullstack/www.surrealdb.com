@@ -5,6 +5,97 @@ export default class extends Component {
 	@cache get model() {
 		return [
 			{
+				time: new Date('2023-09-12T00:00:00'),
+				name: 'Release v1.0.0-beta.12',
+				path: 'section/releases/v1-0-0-beta-12',
+				link: 'v1.0.0-beta.12',
+				hash: 'v1-0-0-beta-12',
+				data: [
+					{
+						name: 'Features',
+						text: [
+							'<code>EXPLAIN</code> command now also explains why it sometimes falls back to a full table iteration.',
+							'Add <code>$before</code> and <code>$after</code> params to <code>RETURN</code> clauses.',
+							'Add live queries to <code>INFO FOR TB</code> statement.',
+							'Support of range queries in the query planner.',
+						],
+					},
+					{
+						name: 'Bug fixes',
+						text: [
+							{
+								category: 'bug',
+								text: 'Majorly improved error messages.',
+							},
+							{
+								category: 'bug',
+								text: 'When a scope fails to authenticate, we now give a detailed explanation as to why.',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure parameters are computed before being stored on WebSocket.',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure <code>DEFAULT</code> clause is displayed on <code>DEFINE FIELD</code> statements.',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure scope <code>SIGNUP</code> and <code>SIGNIN</code> works with guest access disabled.',
+							},
+							{
+								category: 'bug',
+								text: 'Fix authentication issues with <code>LIVE SELECT</code> statements.',
+							},
+							{
+								category: 'bug',
+								text: 'Support <code>FOR</code> statements inside code blocks.',
+							},
+							{
+								category: 'bug',
+								text: 'When a scope fails to authenticate, we now give a detailed explanation as to why.',
+							},
+							{
+								category: 'bug',
+								text: 'Cluster bootstrapping now warns and continues instead of fail-stopping',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure Live Queries are killed correctly.',
+							},
+							{
+								category: 'bug',
+								text: 'Ensure that scripting functions can be used within <code>SELECT</code>-statement predicates.',
+							},
+							{
+								category: 'bug',
+								text: 'Avoid panics when displaying errors.',
+							},
+							{
+								category: 'bug',
+								text: 'Prevent infinite parser recursion in stmts & binary exprs.',
+							},
+							{
+								category: 'bug',
+								text: 'Fix panic on commit when defining db and tb in strict mode.',
+							},
+							{
+								category: 'bug',
+								text: 'Fix decimal deserialisation.',
+							},
+							{
+								category: 'bug',
+								text: 'Fix change feeds enabled at the database-level.',
+							},
+							{
+								category: 'bug',
+								text: 'Allow for multiple indexes on a single field.',
+							},
+						],
+					},
+				],
+			},
+			{
 				time: new Date('2023-09-05T00:00:00'),
 				name: 'Release v1.0.0-beta.11',
 				path: 'section/releases/v1-0-0-beta-11',
