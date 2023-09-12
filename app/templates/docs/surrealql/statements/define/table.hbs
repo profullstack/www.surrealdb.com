@@ -38,6 +38,9 @@
 	<p><code>DROP</code> tables are useful in combination with events or foreign (view) tables, as you can compute a record and essentially drop the input.</p>
 	<Code @name="docs/surrealql/statements/define/table/drop-table.surql" />
 
+	<p> The following expression shows how you can define a <code>CHANGEFEED</code> for a table. You create, update, delete records in the table as usual</p>
+	<Code @name="docs/surrealql/statements/define/table/changefeed-table.surql" />
+
 	<h4>Schemafull tables</h4>
 	<p>The following example demonstrates the <code>SCHEMAFULL</code> portion of the <code>DEFINE TABLE</code> statement. When a table is defined as schemafull, the database strictly enforces any schema definitions that are specified using the <code>DEFINE TABLE</code> statement. New fields can not be added to a <code>SCHEMAFULL</code> table unless they are defined via the <code>DEFINE FIELD</code> statement.</p>
 	<Code @name="docs/surrealql/statements/define/table/schemafull-table.surql" />

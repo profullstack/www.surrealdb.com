@@ -208,6 +208,7 @@ Router.map(function () {
 
 				this.route('remove');
 				this.route('sleep');
+				this.route('show');
 			});
 
 			this.route('functions', function () {

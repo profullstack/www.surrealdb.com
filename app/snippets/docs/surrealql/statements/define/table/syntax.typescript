@@ -6,6 +6,7 @@ DEFINE TABLE @name
 		[ WHERE @condition ]
 		[ GROUP [ BY ] @groups ]
 	]
+	[CHANGEFEED @duration]
 	[ PERMISSIONS [ NONE | FULL
 		| FOR select @expression
 		| FOR create @expression
