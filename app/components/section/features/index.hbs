@@ -1128,7 +1128,7 @@
 				<block>
 					<h4 flex row middle>
 						User interface
-						<l purple>Planned 1.0</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						An easy-to-use interface with support for table-based views, SurrealQL querying, embedded object
@@ -1155,7 +1155,7 @@
 					<h4 flex row middle>
 						<i class="fab fa-chrome font-30 m-r-10"></i>
 						Web app
-						<l purple>Planned 1.0</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						The interface will be available as a web app, installed on every instance of SurrealDB, and can
@@ -1166,7 +1166,7 @@
 					<h4 flex row middle>
 						<i class="fab fa-apple font-30 m-r-10"></i>
 						macOS
-						<l purple>Planned 1.0</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						The interface will be available as a desktop application for macOS powered by Tauri. This can be
@@ -1177,7 +1177,7 @@
 					<h4 flex row middle>
 						<i class="fab fa-windows font-30 m-r-10"></i>
 						Windows
-						<l purple>Planned 1.0</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						The interface will be available as a desktop application for Windows powered by Tauri. This can
@@ -1314,7 +1314,7 @@
 					<h4 flex row middle>
 						<i class="fab fa-ember font-30 m-r-10"></i>
 						Ember.js
-						<l green>Complete</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						A real-time, live-updating SDK for Ember.js, with authentication, model definition, embedded
@@ -1325,7 +1325,7 @@
 					<h4 flex row middle>
 						<i class="fab fa-react font-30 m-r-10"></i>
 						React.js
-						<l purple>Planned 1.X</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						A real-time, live-updating SDK for React.js, with authentication, model definition, embedded
@@ -1336,7 +1336,7 @@
 					<h4 flex row middle>
 						<i class="fab fa-vuejs font-30 m-r-10"></i>
 						Vue.js
-						<l purple>Planned 1.X</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						A real-time, live-updating SDK for Vue.js, with authentication, model definition, embedded
@@ -1346,7 +1346,7 @@
 				<block>
 					<h4 flex row middle>
 						Next.js
-						<l purple>Planned 1.X</l>
+						<l pink>Future</l>
 					</h4>
 					<p>
 						A real-time, live-updating SDK for Next.js, with authentication, model definition, embedded
@@ -1390,6 +1390,46 @@
 			<Layout::Gap small />
 
 		</section>
+
+	<Layout::Line />
+
+		<Layout::Blocks cols-1 as |block|>
+				<block>
+					<h4 flex row middle>
+						Surreal ML
+						<l purple>Beta</l>
+					</h4>
+					<p>
+						SurrealML is essentially a feature that enables users to store trained machine learning models in a `surml` format so the model can be run in either python or rust. Users can also upload these files to a SurrealDB node so they can run their machine learning models on the server.
+					</p>
+
+					<h5> Saving a trained model</h5>
+					<p>
+						Below is how we add meta data to our trained model so this information is available when opening a model:
+					</p>
+					<block>
+					<Code @name="features/surrealML/trainedmodel.py" />
+				</block>
+				</block>
+					<block>
+						<p>it must be noted that all this meta data gets automatically used when calling the <code>buffered_compute</code>:</p>
+					<Code @name="features/surrealML/buffered_compute.py" />
+				</block>
+				<p> In this example, the field is automatically mapped to the right position for the input tensor, and normalisations (if the normalisation is provided), are automatically applied to the input values, reducing errors of implementation of the models when distributed or deployed. </p>
+
+				<block>
+						<h5>Uploading models to SurrealDB</h5>
+						<p> Also, we have included the to and from bytes for our surml files, so they can be sent over networks as seen in the following example where we upload our model to the surrealdb database so it can be executed on the database:</p>
+
+							<block>
+						<p>it must be noted that all this meta data gets automatically used when calling the <code>buffered_compute</code>:</p>
+					<Code @name="features/surrealML/uploading.py" />
+				</block>
+				</block>
+
+			</Layout::Blocks>
+
+			<Layout::Gap mini />
 
 	</Layout::Helm::Main>
 
