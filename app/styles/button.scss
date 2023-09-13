@@ -13,7 +13,7 @@ button, a[button] {
 	letter-spacing:0.005em;
 	color: var(--text-color);
 	background: transparent;
-	border-radius: 1px solid #ffffff;
+	border: 1px solid #ffffff;
 
 	@include media(max-width-642) {
 		width:100%;
@@ -21,7 +21,7 @@ button, a[button] {
 
 	&:hover {
 		background: transparent;
-		border-radius: 1px solid #ffffff;
+		border: 1px solid #ffffff;
 	}
 
 	span + i {
@@ -101,7 +101,7 @@ button, a[button] {
 		@include media(max-width-642) {
 			width:100%;
 		}
-		
+
 
 		div {
 			width:100%;
@@ -133,7 +133,7 @@ button, a[button] {
 			@include media(max-width-642) {
 				width:100%;
 			}
-			
+
 
 			div {
 				width:100%;
