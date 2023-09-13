@@ -1,0 +1,74 @@
+<Meta::Tags
+	@title="SurrealDB | The ultimate database for tomorrow's applications"
+	@description="SurrealDB is the ultimate database for tomorrow's serverless, jamstack, single-page, and traditional applications."
+/>
+
+<Layout::Hero products>
+	<Layout::Text text-l>
+		<h1>The SurrealDB platform</h1>
+		<h2>Built with developers in mind. Built to scale.</h2>
+		<Button::Thicker @link="features">
+			<i class="fal fa-list-check"></i> <span>View all features</span>
+		</Button::Thicker>
+		<Button::Thicker @link="docs.introduction.start">
+			<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
+		</Button::Thicker>
+	</Layout::Text>
+	<Layout::Boxes cols-3-to-2-to-1>
+		<Link @link="docs.surrealql" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/ql.png" @text="The query language in SurrealDB looks and works similarly to traditional-SQL, but allows for querying over time-series and connected graph data. SurrealQL is an advanced query language, with programming language functionality, that allows developers or data analysts to work with SurrealDB in the ways they choose." hover />
+		</Link>
+		<Link @link="lq" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/lq.png" @text="Live Queries in SurrealDB enable a simple yet seamless way of building modern, responsive applications, whether connecting to SurrealDB as a traditional backend database, or when connecting directly to the database from the frontend." hover />
+		</Link>
+		<Link @link="ix" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/ix.png" @text="SurrealDB is designed for building applications of any size - and for that, query performance, and improved data analysis workloads are key. With SurrealDB secondary indexes, you can now index data using traditional indexes, full-text search indexing, and vector-embedding search for artificial intelligence use cases." hover />
+		</Link>
+		<Link @link="cf" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/cf.png" @text="Change Feeds enable SurrealDB to play a role within within the wider ecosystem of enterprise, cloud, or micro-service based platforms, giving users the ability to retrieve and sync changes from SurrealDB to external systems and platforms." hover />
+		</Link>
+		<Link @link="ml" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/ml.png" @text="SurrealML enables machine learning models to be greatly simplified, ensuring reproducibility and consistency in machine learning pipelines. Running on our Rust engine, models can be built in Python, and imported in to SurrealDB for inference within the database runtime." hover />
+		</Link>
+	</Layout::Boxes>
+</Layout::Hero>
+
+<section black>
+
+	<Layout::Gap small />
+
+	<Layout::Text text-l>
+		<h6>Getting started with SurrealDB.</h6>
+	</Layout::Text>
+
+	<Layout::Gap mini />
+
+	<Layout::Text text-l>
+		<h5>SurrealDB makes building and scaling realtime apps dramatically quicker and easier. Get started by  <Link @link="docs.installation">installing the server </Link> , and jump into our <Link @link="docs.introduction.start"> getting started guide </Link> to learn how to insert and query data in SurrealDB in minutes.</h5>
+	</Layout::Text>
+
+	<Layout::Gap small />
+
+	<Layout::Boxes cols-1>
+		<Layout::Boxes::Item @image="/static/img/illustrations/illustrations2.png" hover />
+	</Layout::Boxes>
+
+	<Layout::Gap large />
+
+</section>
+
+<section pink>
+
+	<Layout::Gap large />
+
+	<Layout::Text text-l>
+		<h6 same>Loved by developers</h6>
+	</Layout::Text>
+
+	<Layout::Gap small />
+
+	<Section::Testimonials />
+
+	<Layout::Gap large />
+
+</section>

@@ -8,9 +8,9 @@ layout-ticks {
 		padding:60px;
 		grid-gap:20px 50px;
 		border-radius:16px;
-		background-color:var(--boxes-color);
+		background-color:var(--back-color);
 		grid-template-columns:repeat(3, 1fr);
-		box-shadow:0px 4px 12px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.1);
+		border: solid 1px #282b48;
 
 		@include media(max-width-1150) {
 			grid-template-columns:repeat(2, 1fr);

@@ -3,316 +3,110 @@
 	@description="SurrealDB is the ultimate database for tomorrow's serverless, jamstack, single-page, and traditional applications."
 />
 
-<Layout::Hero @logo={{true}}>
-	<h1><img inline src="/static/img/text.svg" alt="SurrealDB" /> is the <span gradient>ultimate</span> multi-model <span gradient>database</span> for tomorrow's applications</h1>
-	<h2><e>Develop easier.</e><e>Build faster.</e><e>Scale quicker.</e></h2>
-	<p>With an SQL-style query language, real-time queries with highly-efficient related data retrieval, advanced security permissions for multi-tenant access, and support for performant analytical workloads, SurrealDB is the next generation serverless database.</p>
-	<Button::Thicker @link="docs.introduction.start">
-		 <span>Get started</span><i class="fas fa-arrow-right"></i>
-	</Button::Thicker>
-	<Button::Thicker @link="docs">
-		<i class="fas fa-book-sparkles"></i> <span>Documentation</span>
-	</Button::Thicker>
-	<Signup::Cloud />
+<Layout::Hero index @logo={{true}}>
+	<Layout::Text text-l>
+		<h1>The ultimate multi-model database</h1>
+		<h2>Develop easier. Build faster. Scale quicker.</h2>
+		<Button::Thicker @link="features">
+			<i class="fal fa-list-check"></i> <span>View all features</span>
+		</Button::Thicker>
+		<Button::Thicker @link="docs.introduction.start">
+			<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
+		</Button::Thicker>
+	</Layout::Text>
+	<Layout::Boxes cols-3-to-2-to-1>
+		<Link @link="docs.surrealql" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/ql.png" @text="The query language in SurrealDB looks and works similarly to traditional-SQL, but allows for querying over time-series and connected graph data. SurrealQL is an advanced query language, with programming language functionality, that allows developers or data analysts to work with SurrealDB in the ways they choose." hover />
+		</Link>
+		<Link @link="lq" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/lq.png" @text="Live Queries in SurrealDB enable a simple yet seamless way of building modern, responsive applications, whether connecting to SurrealDB as a traditional backend database, or when connecting directly to the database from the frontend." hover />
+		</Link>
+		<Link @link="ix" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/ix.png" @text="SurrealDB is designed for building applications of any size - and for that, query performance, and improved data analysis workloads are key. With SurrealDB secondary indexes, you can now index data using traditional indexes, full-text search indexing, and vector-embedding search for artificial intelligence use cases." hover />
+		</Link>
+		<Link @link="cf" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/cf.png" @text="Change Feeds enable SurrealDB to play a role within within the wider ecosystem of enterprise, cloud, or micro-service based platforms, giving users the ability to retrieve and sync changes from SurrealDB to external systems and platforms." hover />
+		</Link>
+		<Link @link="ml" mini>
+			<Layout::Boxes::Item transparent @image="/static/img/ml.png" @text="SurrealML enables machine learning models to be greatly simplified, ensuring reproducibility and consistency in machine learning pipelines. Running on our Rust engine, models can be built in Python, and imported in to SurrealDB for inference within the database runtime." hover />
+		</Link>
+	</Layout::Boxes>
 </Layout::Hero>
 
-<Layout::Text>
- 	<h2>Why use <img inline src="/static/img/text.svg" alt="SurrealDB" />?</h2>
-	<p>SurrealDB is an innovative NewSQL cloud database designed for serverless applications, Jamstack applications, single-page applications, and traditional applications alike. Its unmatched versatility and exceptional cost-effectiveness make it suitable for deployment in the cloud, on-premise, in embedded systems, and in edge computing environments. For a quick start, check out our <Link @link="docs.introduction.start">getting started </Link> guide!</p>
-	<p>
-		<Link button bordered thicker @link="usecase.jamstack">
-			<div>
-				<span>Jamstack apps</span> <i class="fas fa-arrow-right"></i>
-			</div>
-		</Link>
-		<Link button bordered thicker @link="usecase.serverless">
-			<div>
-				<span>Serverless apps</span> <i class="fas fa-arrow-right"></i>
-			</div>
-		</Link>
-	</p>
-</Layout::Text>
-
-<Layout::Gap mini />
-
-<Layout::Boxes cols-3-to-1>
-	<Layout::Boxes::Item @tick={{true}} @title="Develop easier" @text="There is no need for your team to learn new complicated database languages. Getting started with SurrealDB is as simple as one command - and advanced functionality is simple to understand, whilst still being fast and performant." />
-	<Layout::Boxes::Item @tick={{true}} @title="Build faster" @text="SurrealDB simplifies your database and API stack, removing the need for most server-side components. As a web database, client-side applications can be built with direct connections to SurrealDB, while traditional server-side development techniques can still leverage the powerful but simple querying and analytics abilities." />
-	<Layout::Boxes::Item @tick={{true}} @title="Scale quicker" @text="Forget about scaling databases, servers, loadbalancers, and API endpoints. SurrealDB takes the hassle out of your stack, enabling you to grow and operate at scale with a highly-available, highly-scalable distributed platform. Deploy anywhere, or keep it simple with SurrealDB Cloud." />
-</Layout::Boxes>
-
-<Layout::Gap large />
-
-<Layout::Blocks main-l as |block|>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/database-api-security.png" />
-		</pic>
-	</block>
-	<block flex col middle>
-		<h3>Database, realtime API layer, and security permissions all-in-one</h3>
-		<p>SurrealDB combines the database layer, the querying layer, and the API and authentication layer into one platform. Advanced table-based and row-based customisable access permissions allow for granular data access patterns for different types of users. There's no need for custom backend code and security rules with complicated database development.</p>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-r as |block|>
-	<block flex col middle>
-		<h3>Tables, documents, and graph. Store and model your data in any way</h3>
-		<p>As a multi-model database, SurrealDB enables developers to use multiple techniques to store and model data, without having to choose a method in advance. With the use of tables, SurrealDB has similarities with relational databases, but with the added functionality and flexibility of advanced nested fields and arrays. Inter-document record links allow for simple to understand and highly-performant related queries without the use of JOINs, eliminating the N+1 query problem.</p>
-	</block>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/multimodel-database.png" />
-		</pic>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-l as |block|>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/graph-database.png" />
-		</pic>
-	</block>
-	<block flex col middle>
-		<h3>Advanced inter-document relations and analysis. No JOINs. No pain.</h3>
-		<p>With full graph database functionality, SurrealDB enables more advanced querying and analysis. Records (or vertices) can be connected to one another with edges, each with its own record properties and metadata. Simple extensions to traditional SQL queries allow for multi-table, multi-depth document retrieval, efficiently in the database, without the use of complicated JOINs and without bringing the data down to the client.</p>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-r as |block|>
-	<block flex col middle>
-		<h3>Simple schema definition for frontend and backend development</h3>
-		<p>With SurrealDB, specify your database and API schema in one place, and define column rules and constraints just once. Once a schema is defined, database access is automatically granted to the relevant users. No more custom API code, and no more GraphQL integration. Simple, flexible, and ready for production in minutes, not months.</p>
-	</block>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/schema-direct-to-client.png" />
-		</pic>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-l as |block|>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/browser-sync.png" />
-		</pic>
-	</block>
-	<block flex col middle>
-		<h3>Connect and query directly from web-browsers and client devices</h3>
-		<p>Connect directly to SurrealDB from any end-user client device. Run SurrealQL queries directly within web-browsers, ensuring that users can only view or modify the data that they are allowed to access. Highly-performant WebSocket connections allow for efficient bi-directional queries, responses and notifications.</p>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-r as |block|>
-	<block flex col middle>
-		<h3>Query the database with the tools you want. Your data, your choice.</h3>
-		<p>SurrealDB is designed to be flexible to use, with support for SurrealQL, GraphQL (coming soon), CRUD support over REST, and JSON-RPC querying and modification over WebSockets. With direct-to-client connection with in-built permissions, SurrealDB speeds up the development process, and fits in seamlessly into any tech stack.</p>
-	</block>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/multiple-integrations.png" />
-		</pic>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-l as |block|>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/realtime-live-queries.png" />
-		</pic>
-	</block>
-	<block flex col middle>
-		<h3>Realtime live queries and data changes direct to application</h3>
-		<p>SurrealDB keeps every client device in-sync with data modifications pushed in realtime to the clients, applications, end-user devices, and server-side libraries. Live SQL queries allow for advanced filtering of the changes to which a client subscribes, and efficient data formats, including DIFFing and PATCHing enable highly-performant web-based data syncing.</p>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-r as |block|>
-	<block flex col middle>
-		<h3>Scale effortlessly to hundreds of nodes for high-availability and scalability</h3>
-		<p>SurrealDB can be run as a single in-memory node, or as part of a distributed cluster - offering highly-available and highly-scalable system characteristics. Designed from the ground up to run in a distributed environment, SurrealDB makes use of special techniques when handling multi-table transactions, and document record IDs - with no use of table or row locks.</p>
-	</block>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/scale-up.png" />
-		</pic>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-l as |block|>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/database-plugins.png" />
-		</pic>
-	</block>
-	<block flex col middle>
-		<h3>Extend your database with JavaScript and WebAssembly functions</h3>
-		<p>Embedded JavaScript functions allow for advanced, custom functionality, with computation logic being moved to the data layer. This improves upon the traditional approach of moving data to the client devices before applying any computation logic, ensuring that only the necessary data is transferred remotely. These advanced JavaScript functions, with support for the ES2020 standard, allow any developer to analyse the data in ever more simple-yet-advanced ways.</p>
-	</block>
-</Layout::Blocks>
-
-<Layout::Blocks main-r as |block|>
-	<block flex col middle>
-		<h3>Designed to be embedded or to run distributed in the cloud</h3>
-		<p>Built entirely in Rust as a single library, SurrealDB is designed to be used as both an embedded database library with advanced querying functionality, and as a database server which can operate in a distributed cluster. With low memory usage and cpu requirements, SurrealDB has been specifically designed to run in all types of environment.</p>
-	</block>
-	<block>
-		<pic>
-			<img src="/static/img/illustrations/cloud-or-embedded.png" />
-		</pic>
-	</block>
-</Layout::Blocks>
-
-<Layout::Gap small />
-
-<section>
+<section black>
 
 	<Layout::Gap small />
 
-	<Layout::Text>
-	 	<h2>A highly-scalable NewSQL database</h2>
-		<p>SurrealDB is a flexible, developer-friendly, fully ACID transactional, realtime document-graph web database for serverless applications. Never again worry about database provisioning, scaling, sharding, replication, or correctness.</p>
+	<Layout::Text text-l>
+		<h5 light>SurrealDB offers a dynamic and adaptable platform for business. With an integrated suite of cutting-edge database solutions, tools, and services, SurrealDB empowers your workforce to discover innovative answers using products meticulously crafted to meet their requirements.</h5>
 	</Layout::Text>
 
 	<Layout::Gap small />
 
-	<Layout::Ticks>
-		<Layout::Ticks::Item @text="Document & graph database" />
-		<Layout::Ticks::Item @text="JOIN-less deep fetching" />
-		<Layout::Ticks::Item @text="Distributed ACID transactions" />
-		<Layout::Ticks::Item @text="Built with Rust" />
-		<Layout::Ticks::Item @text="Structured and un-structured data" />
-		<Layout::Ticks::Item @text="SQL-style querying" />
-		<Layout::Ticks::Item @text="GraphQL and REST API" />
-		<Layout::Ticks::Item @text="Support for multi-tenant apps" />
-		<Layout::Ticks::Item @text="Multi-row, multi-table transactions" />
-		<Layout::Ticks::Item @text="Online and offline data sync" />
-		<Layout::Ticks::Item @text="In-built access and permissions" />
-		<Layout::Ticks::Item @text="Multi-column and full-text indexes" />
-		<Layout::Ticks::Item @text="Incrementally computed views" />
-		<Layout::Ticks::Item @text="Distributed and highly-scalable" />
-		<Layout::Ticks::Item @text="No complex back-end servers and APIs" />
-	</Layout::Ticks>
+	<Layout::Boxes cols-1>
+		<Layout::Boxes::Item @image="/static/img/illustrations/illustrations.png" hover />
+	</Layout::Boxes>
 
-	<Layout::Gap small />
+	<Layout::Gap line />
 
-</section>
+	<Layout::Boxes cols-2-to-1>
+		<Layout::Boxes::Item text-l light @title="Database, realtime API layer, and security permissions all-in-one" @image="/static/img/illustrations/dark/database-api-security.png" @text="SurrealDB combines the database layer, the querying layer, and the API and authentication layer into one platform. Advanced table-based and row-based customisable access permissions allow for granular data access patterns for different types of users. There's no need for custom backend code and security rules with complicated database development." />
+		<Layout::Boxes::Item text-l light @title="Connect and query directly from web-browsers and client devices" @image="/static/img/illustrations/dark/browser-sync.png" @text="Connect directly to SurrealDB from any end-user client device. Run SurrealQL queries directly within web-browsers, ensuring that users can only view or modify the data that they are allowed to access. Highly-performant WebSocket connections allow for efficient bi-directional queries, responses and notifications." />
+		<Layout::Boxes::Item text-l light @title="Query the database with the tools you want. Your data, your choice." @image="/static/img/illustrations/dark/multiple-integrations.png" @text="SurrealDB is designed to be flexible to use, with support for SurrealQL, GraphQL (coming soon), CRUD support over REST, and JSON-RPC querying and modification over WebSockets. With direct-to-client connection with in-built permissions, SurrealDB speeds up the development process, and fits in seadarkessly into any tech stack." />
+		<Layout::Boxes::Item text-l light @title="Advanced inter-document relations and analysis. No JOINs. No pain." @image="/static/img/illustrations/dark/no-joins.png" @text="With full graph database functionality, SurrealDB enables more advanced querying and analysis. Records (or vertices) can be connected to one another with edges, each with its own record properties and metadata. Simple extensions to traditional SQL queries allow for multi-table, multi-depth document retrieval, efficiently in the database, without the use of complicated JOINs and without bringing the data down to the client." />		
+		<Layout::Boxes::Item text-l light @title="Tables, documents, and graph. Store and model your data in any way" @image="/static/img/illustrations/dark/multimodel-database.png" @text="As a multi-model database, SurrealDB enables developers to use multiple techniques to store and model data, without having to choose a method in advance. With the use of tables, SurrealDB has similarities with relational databases, but with the added functionality and flexibility of advanced nested fields and arrays. Inter-document record links allow for simple to understand and highly-performant related queries without the use of JOINs, eliminating the N+1 query problem." />
+		<Layout::Boxes::Item text-l light @title="Simple schema definition for frontend and backend development" @image="/static/img/illustrations/dark/schema-direct-to-client.png" @text="With SurrealDB, specify your database and API schema in one place, and define column rules and constraints just once. Once a schema is defined, database access is automatically granted to the relevant users. No more custom API code, and no more GraphQL integration. Simple, flexible, and ready for production in minutes, not months." />
+		<Layout::Boxes::Item text-l light @title="Realtime live queries and data changes direct to application" @image="/static/img/illustrations/dark/realtime-live-queries.png" @text="SurrealDB keeps every client device in-sync with data modifications pushed in realtime to the clients, applications, end-user devices, and server-side libraries. Live SQL queries allow for advanced filtering of the changes to which a client subscribes, and efficient data formats, including DIFFing and PATCHing enable highly-performant web-based data syncing." />
+		<Layout::Boxes::Item text-l light @title="Scale effortlessly to hundreds of nodes for high-availability and scalability" @image="/static/img/illustrations/dark/highly-available-and-scalable.png" @text="SurrealDB can be run as a single in-memory node, or as part of a distributed cluster - offering highly-available and highly-scalable system characteristics. Designed from the ground up to run in a distributed environment, SurrealDB makes use of special techniques when handling multi-table transactions, and document record IDs - with no use of table or row locks." />
+		<Layout::Boxes::Item text-l light @title="Extend your database with JavaScript and WebAssembly functions" @image="/static/img/illustrations/dark/database-plugins.png" @text="Embedded JavaScript functions allow for advanced, custom functionality, with computation logic being moved to the data layer. This improves upon the traditional approach of moving data to the client devices before applying any computation logic, ensuring that only the necessary data is transferred remotely. These advanced JavaScript functions, with support for the ES2020 standard, allow any developer to analyse the data in ever more simple-yet-advanced ways." />
+		<Layout::Boxes::Item text-l light @title="Designed to be embedded or to run distributed in the cloud" @image="/static/img/illustrations/dark/cloud-or-embedded.png" @text="Built entirely in Rust as a single library, SurrealDB is designed to be used as both an embedded database library with advanced querying functionality, and as a database server which can operate in a distributed cluster. With low memory usage and cpu requirements, SurrealDB has been specifically designed to run in all types of environment." />
+	</Layout::Boxes>
 
-<section>
-
-	<Layout::Gap small />
-
-	<Layout::Blocks main-l as |block|>
-		<block>
-			<h3>Improved data modelling</h3>
-			<p>SurrealDB doesn't force you into setting up your data model in any one way. Instead you can choose between simple documents, documents with embedded fields, or related graph connections between records. Use schemafull or schemaless tables giving you the flexibility to store whatever you need.</p>
-			<p>Once stored in SurrealDB, all data is strongly typed, with the ability to convert between different types seamlessly - and numbers can be stored and computed with 64 bit precision or as arbitrary length decimals.</p>
-			<Button::Thicker @link="features">
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			</Button::Thicker>
-			<Button::Thicker @link="docs.introduction.start">
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			</Button::Thicker>
-		</block>
-		<block>
-			<Code min-h-300 @name="index/modelling.surql" />
-		</block>
-	</Layout::Blocks>
-
-	<Layout::Gap small />
-
-	<Layout::Blocks main-r as |block|>
-		<block>
-			<Code min-h-300 @name="index/surrealql.surql" />
-		</block>
-		<block>
-			<h3>Powerful querying abilities</h3>
-			<p>The primary method of querying SurrealDB is using SurrealQL, a similar but modified version of traditional SQL. SurrealQL enables linked documents to be traversed and queried efficiently, while still using an imperative language which remains understandable by data scientists.</p>
-			<p>With an innovative, but simple-to-understand, SQL language developers or data scientists can use a myriad of different techniques to store, query, and analyse the data in SurrealDB.</p>
-			<Button::Thicker @link="features">
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			</Button::Thicker>
-			<Button::Thicker @link="docs.introduction.start">
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			</Button::Thicker>
-		</block>
-	</Layout::Blocks>
-
-	<Layout::Gap small />
-
-	<Layout::Blocks main-l as |block|>
-		<block>
-			<h3>Simplified data analytics</h3>
-			<p>SurrealDB is designed to be quick to setup, and even quicker to implement. Multi-column indexes can be easily added and removed as your application evolves, allowing for strongly consistent reads and writes, and highly-performant reads.</p>
-			<p>Pre-computed table views allow superfast and highly-efficient aggregated data for queries which are known upfront - with simple view definition as easy as writing an SQL statement.</p>
-			<Button::Thicker @link="features">
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			</Button::Thicker>
-			<Button::Thicker @link="docs.introduction.start">
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			</Button::Thicker>
-		</block>
-		<block>
-			<Code min-h-300 @name="index/analytics.surql" />
-		</block>
-	</Layout::Blocks>
-
-	<Layout::Gap small />
-
-	<Layout::Blocks main-r as |block|>
-		<block>
-			<Code min-h-300 @name="index/permissions.surql" />
-		</block>
-		<block>
-			<h3>Faster app development times</h3>
-			<p>With permissions in-built from the ground up, SurrealDB is the perfect web-database for serverless applications. Easily specify permissions with easy-to-write SQL statements, ensuring that only the correct users can access the specified data that they have permission to select or modify.</p>
-			<p>With support for SSL/TLS, Single-Sign-On, external 3rd party authentication, JWT token based authentication, and custom business authentication logic - SurrealDB offers strong security, with the flexibility of custom authentication methods that suit your app or business.</p>
-			<Button::Thicker @link="features">
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			</Button::Thicker>
-			<Button::Thicker @link="docs.introduction.start">
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			</Button::Thicker>
-		</block>
-	</Layout::Blocks>
-
-	<Layout::Gap small />
-
-	<Layout::Blocks main-l as |block|>
-		<block>
-			<h3>Superpowered database functionality</h3>
-			<p>When connecting with SurrealDB, all connections are made using WebSockets, allowing for bi-directional data syncing. Dependent on data access permissions, client-based document subscriptions are triggered in real-time whenever changes are made to the data.</p>
-			<p>Data subscriptions can be specified for whole tables, filtered result sets, or individual records - enabling a multitude of different use-cases in all types of applications.</p>
-			<Button::Thicker @link="features">
-				<i class="fal fa-list-check"></i> <span>View all features</span>
-			</Button::Thicker>
-			<Button::Thicker @link="docs.introduction.start">
-				<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
-			</Button::Thicker>
-		</block>
-		<block>
-			<Code min-h-300 @name="index/collaborate.surql" />
-		</block>
-	</Layout::Blocks>
-
-	<Layout::Gap small />
+	<Layout::Gap large />
 
 </section>
 
-<section>
+<section dark>
 
-	<Layout::Gap small />
+	<Layout::Gap large />
 
-	<Layout::Text>
-		<h2>Loved by developers</h2>
+	<Layout::Text text-l>
+		<h6>About us</h6>
 	</Layout::Text>
 
 	<Layout::Gap mini />
 
-	<Section::Testimonials />
+	<Layout::Text text-l>
+		<h5 faint>SurrealDB offers a dynamic and adaptable platform for business. With an integrated suite of cutting-edge database solutions, tools, and services, SurrealDB empowers your workforce to discover innovative answers using products meticulously crafted to meet their requirements.</h5>
+	</Layout::Text>
 
 	<Layout::Gap small />
 
+	<Layout::Boxes cols-2-to-1>
+		<Link @link="community" mini>
+			<Layout::Boxes::Item community @title="Community" @image="/static/img/img.png" @text="Join our community of maintainers, contributors, users, and surreal enthusiasts and help us make SurrealDB better for developers and organisations all around the world." />
+		</Link>
+		<Link @link="careers" mini>
+			<Layout::Boxes::Item careers1 @title="Careers" @image="/static/img/img.png" @text="We are seeking to hire the best - people who care deeply about the work they do, and care about the people with whom they create and promote the product." />
+		</Link>
+	</Layout::Boxes>
+
+	<Layout::Gap large />
+
 </section>
 
-<Layout::Github />
+<section pink>
+
+	<Layout::Gap large />
+
+	<Layout::Text text-l>
+		<h6 same>Loved by developers</h6>
+	</Layout::Text>
+
+	<Layout::Gap small />
+
+	<Section::Testimonials />
+
+	<Layout::Gap large />
+
+</section>

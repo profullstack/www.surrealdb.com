@@ -1,88 +1,12 @@
 <footer ...attributes>
 	<content route={{route-name}}>
-		<upper>
-			<div>
-				<LinkTo @route="index" class="logo"></LinkTo>
-				<p>With an SQL-style query language, real-time queries with highly-efficient related data retrieval, advanced security permissions for multi-tenant access, and support for performant analytical workloads, SurrealDB is the next generation serverless database.</p>
-				<p>
-					<Link @link={{url "github"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Follow us on GitHub
-						</Ascua::Tooltip>
-						<i class="fab fa-github"></i>
-					</Link>
-					<Link @link={{url "discord"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Join our Discord community
-						</Ascua::Tooltip>
-						<i class="fab fa-discord"></i>
-					</Link>
-					<Link @link={{url "twitter"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Follow SurrealDB on Twitter
-						</Ascua::Tooltip>
-						<i class="fab fa-twitter"></i>
-					</Link>
-					<Link @link={{url "linkedin"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Connect with us on LinkedIn
-						</Ascua::Tooltip>
-						<i class="fab fa-linkedin"></i>
-					</Link>
-					<Link @link={{url "instagram"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Join us on Instagram
-						</Ascua::Tooltip>
-						<i class="fab fa-instagram"></i>
-					</Link>
-					<Link @link={{url "threads"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Follow us on Threads
-						</Ascua::Tooltip>
-						<i class="fab fa-threads"></i>
-					</Link>
-					<Link @link={{url "youtube"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Visit our Youtube channel
-						</Ascua::Tooltip>
-						<i class="fab fa-youtube"></i>
-					</Link>
-					<Link @link={{url "dev"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Join our DEV community
-						</Ascua::Tooltip>
-						<i class="fab fa-dev"></i>
-					</Link>
-					<Link @link={{url "medium"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Join our Medium community
-						</Ascua::Tooltip>
-						<i class="fab fa-medium"></i>
-					</Link>
-					<Link @link={{url "stackoverflow"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Ask questions on Stack Overflow
-						</Ascua::Tooltip>
-						<i class="fab fa-stack-overflow"></i>
-					</Link>
-					<Link @link={{url "docker"}}>
-						<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
-							Find SurrealDB on Docker
-						</Ascua::Tooltip>
-						<i class="fab fa-docker"></i>
-					</Link>
-				</p>
-			</div>
-		</upper>
 		<links>
 			<Footer::Links>
 				<Footer::Links::Name @text="Product" />
 				<Footer::Links::Item @link="docs" @text="Documentation" />
-				<Footer::Links::Item @link="why" @text="Why" />
 				<Footer::Links::Item @link="install" @text="Install" />
 				<Footer::Links::Item @link="features" @text="Features" />
 				<Footer::Links::Item @link="releases" @text="Releases" />
-				<Footer::Links::Item @link="roadmap" @text="Roadmap" />
 				<Footer::Links::Status @text="Status" />
 			</Footer::Links>
 			<Footer::Links>
@@ -131,18 +55,14 @@
 			</Footer::Links>
 			<Footer::Links>
 				<Footer::Links::Name @text="About" />
-				<Footer::Links::Item @link="about" @text="About us" />
 				<Footer::Links::Item @link="careers" @text="Careers" />
 				<Footer::Links::Item @link="community" @text="Community" />
 				<Footer::Links::Item @link="opensource" @text="Open source" />
 				<Footer::Links::Item @link="blog" @text="Blog" />
-				<Footer::Links::Item @link="media" @text="Media" />
-				<Footer::Links::Item @link="store" @text="Store" />
+				<Footer::Links::Item @link="https://surrealdb.store" @text="Store" />
 			</Footer::Links>
-			<Icon />
 		</links>
 		<lower>
-			<img src="/static/img/assets/poweredby/light.svg" alt="poweredby-surrealdb-light" />
 			<p>
 				Copyright &copy; SurrealDB Ltd.
 				<br>

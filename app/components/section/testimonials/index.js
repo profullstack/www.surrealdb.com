@@ -26,7 +26,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/julian6bG.png',
 				date: new Date('2022-08-20'),
-				name: '',
+				name: 'Julian6bG',
 				user: 'Julian6bG',
 				text: "Holy shit, I'm blown away! It looks beyond awesome. Can't wait to check it out tonight!",
 				link: 'https://www.reddit.com/r/rust/comments/wt3ygg/comment/il22sv7/?utm_source=share&utm_medium=web2x&context=3',
@@ -34,7 +34,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/greven.png',
 				date: new Date('2022-08-20'),
-				name: '',
+				name: 'greven',
 				user: 'greven',
 				text: "This looks fantastic, congrats! This paired with Elixir Phoenix could be something else for real time. Need to try it out.",
 				link: 'https://www.reddit.com/r/rust/comments/wt3ygg/comment/il2pyyg/?utm_source=share&utm_medium=web2x&context=3',
@@ -42,7 +42,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/mugendee.png',
 				date: new Date('2022-08-20'),
-				name: '',
+				name: 'mugendee',
 				user: 'mugendee',
 				text: "This is amazing! I must say. Can't wait to play around with it.",
 				link: 'https://www.reddit.com/r/rust/comments/wt3ygg/comment/il2af42/?utm_source=share&utm_medium=web2x&context=3',
@@ -58,7 +58,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/_abdfnx.png',
 				date: new Date('2022-02-22'),
-				name: '',
+				name: '@_abdfnx',
 				user: '@_abdfnx',
 				text: "I'm so exited about your version 1.0.0, keep up your awesome work.",
 				link: 'https://mobile.twitter.com/_abdfnx',
@@ -90,7 +90,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/ivanderbu2.png',
 				date: new Date('2022-08-05'),
-				name: '',
+				name: 'ivanderbu2',
 				user: 'ivanderbu2',
 				text: "Checked your QL it does look much simpler compared to Neo4j at least for inserting data. I've no doubt that there is a huge demand for solution like SurrealDB.",
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',
@@ -98,7 +98,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/pdyc.png',
 				date: new Date('2022-08-05'),
-				name: '',
+				name: 'pdyc',
 				user: 'pdyc',
 				text: "My weekend is ruined since i will be playing with surrealdb this weekend :-)",
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',
@@ -106,7 +106,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/ghidra.png',
 				date: new Date('2022-08-05'),
-				name: '',
+				name: 'Ghidra',
 				user: 'Ghidra',
 				text: "Very cool stuff for sure; it looks like a very interesting + useful product.",
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',
@@ -138,7 +138,7 @@ export default class extends Component {
 			{
 				img: '/static/img/developers/mr_olafsson.png',
 				date: new Date('2022-08-05'),
-				name: '',
+				name: 'mr_olafsson',
 				user: 'mr_olafsson',
 				text: "Wow that's hugely ambitious!! Your landing page looks amazing.",
 				link: 'https://www.indiehackers.com/post/just-launched-a-new-scalable-cloud-graph-database-any-feedback-users-testers-appreciated-bddb237166?commentId=-N8jfieKRHG5J0qH0NpG',

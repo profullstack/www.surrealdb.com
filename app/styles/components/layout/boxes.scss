@@ -5,7 +5,7 @@ layout-boxes {
 	content {
 
 		display: grid;
-		grid-gap: 20px 20px;
+		grid-gap: 10px 10px;
 		grid-template-columns: repeat(12, 1fr);
 
 		>a {
@@ -40,10 +40,8 @@ layout-boxes {
 			overflow: hidden;
 			text-align: left;
 			position: relative;
-			border-radius: 16px;
 			grid-column: auto / span 2;
-			background-color: var(--boxes-color);
-			box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.1);
+			background-color: var(--dark-color);
 
 			pic {
 
@@ -59,6 +57,713 @@ layout-boxes {
 					max-width: 100%;
 					object-fit: cover;
 					transition: transform 0.3s;
+				}
+
+			}
+
+			&[clear] {
+
+				background-color: transparent;
+				
+				div {
+					padding-left: 15%;
+					padding-right:15%;
+					padding-bottom: 5%;
+					padding-top: 5%;
+
+					>h3 {
+						color: var(--text-color);
+					}
+	
+					>h4 {
+						color: var(--text-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--text-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--text-color);
+					}
+				}
+
+			}
+
+			&[dark] {
+				background-color:var(--dark-color);
+				div {
+
+					padding:90px;
+				}
+
+			}
+		
+			&[white] {
+				background-color:var(--same-color);
+
+				div {
+					padding-left: 15%;
+					padding-right:15%;
+					padding-bottom: 5%;
+					padding-top: 5%;
+
+					>h3 {
+						font-size: 38px;
+						font-weight: 600;
+						line-height: 1.1;
+						color: var(--text-color);
+					}
+	
+					>h4 {
+						color: var(--text-color);
+					}
+
+					>p:last-child {
+						font-size: 17px;
+						font-weight: 600;
+						padding-bottom: 60px;
+
+					}
+	
+					>p:first-child {
+						font-size: 17px;
+						padding-bottom: 60px;
+						margin-bottom: 5px;
+						display: inline-block;
+						color: var(--text-color);
+					}
+				}
+			}
+
+			&[light] {
+				background-color:var(--light-color);
+
+				div {
+					padding-left: 15%;
+					padding-right:15%;
+					padding-bottom: 5%;
+					padding-top: 5%;
+
+					>h3 {
+						font-size: 32px;
+						font-weight: 600;
+						line-height: 1.2;
+						color: var(--text-color);
+					}
+	
+					>h4 {
+						color: var(--text-color);
+					}
+
+					>p:last-child {
+						font-size: 17px;
+						font-weight: 600;
+						padding-bottom: 60px;
+
+					}
+	
+					>p:first-child {
+						font-size: 17px;
+						padding-bottom: 60px;
+						margin-bottom: 5px;
+						display: inline-block;
+						color: var(--text-color);
+					}
+				}
+
+			}
+		
+			&[pink] {
+				background: rgb(255,0,160);
+				background: -moz-linear-gradient(120deg, rgba(255,0,160,1) 0%, rgba(150,0,255,1) 100%);
+				background: -webkit-linear-gradient(120deg, rgba(255,0,160,1) 0%, rgba(150,0,255,1) 100%);
+				background: linear-gradient(120deg, rgba(255,0,160,1) 0%, rgba(150,0,255,1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00a0",endColorstr="#9600ff",GradientType=1);
+			}
+
+			&[photo1] {
+
+				height:auto;
+				border-radius: 0px;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url("/static/img/casestudies/nhs.jpg");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[photo2] {
+
+				height:auto;
+				border-radius: 0px;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/casestudies/libertymutual.jpg");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[photo3] {
+
+				height:auto;
+				border-radius: 0px;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/casestudies/tesla.jpg");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[photo4] {
+
+				height:auto;
+				border-radius: 0px;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/surrealdbworld.png");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[careers1] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				  background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/careers/hero.png");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[careers2] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/careers/whatissurrealdb.jpg");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[careers3] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/careers/makinganimpact.jpg");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[meettheteam] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/meettheteam/hero.jpg");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[community] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/community/community.png");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[ml] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/SurrealIcon_ML.png");
+
+				@media (prefers-color-scheme: light) {
+					background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/SurrealIcon_ML.png");
+				}
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[lq] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/SurrealIcon_ML.png");
+
+				@media (prefers-color-scheme: light) {
+					background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/SurrealIcon_ML.png");
+				}
+				div {
+					padding: 60px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
+			&[wider] {
+
+				border-radius: 0px;
+				margin-bottom: 100px;
+				background-color:var(--back-color);
+
+				div {
+					padding: 0px;
+
+					@include media(max-width-1200) {
+						width:930px;
+					}
+				
+					@include media(max-width-1024) {
+						width:85%;
+					}
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+
+					@media (prefers-color-scheme: light) {
+						>h3 {
+							color: var(--text-color);
+						}
+		
+						>h4 {
+							color: var(--text-color);
+						}
+	
+						>p:last-child {
+							width:95%;
+							color: var(--faint-color);
+						}
+		
+						>p:first-child {
+							width:95%;
+							color: var(--faint-color);
+						}
+					}
+
+				}
+
+				pic {
+
+					display: block;
+					width: 110px;
+					overflow: hidden;
+					position: relative;
+					padding-bottom: 20px;
+					border-radius: 0px;
+					background-color:none
+	
+					img {
+						width: 100%;
+						margin: auto;
+						height: 100%;
+						display: block;
+						max-width: 100%;
+						object-fit: cover;
+						transition: transform 0.3s;
+					}
+	
+				}
+			}
+
+			&[transparent] {
+
+				border-radius: 0px;
+				margin-bottom: 100px;
+				background-color:transparent;
+
+				div {
+					padding: 0px;
+					max-width: 100%;
+
+					@include media(max-width-1200) {
+						width:930px;
+					}
+				
+					@include media(max-width-1024) {
+						width:85%;
+					}
+
+					>h3 {
+						color: var(--text-color);
+					}
+	
+					>h4 {
+						color: var(--text-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--text-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--text-color);
+					}
+
+				}
+
+				pic {
+
+					display: block;
+					width: 110px;
+					overflow: hidden;
+					position: relative;
+					padding-bottom: 20px;
+					border-radius: 0px;
+					background-color:none
+	
+					img {
+						width: 100%;
+						margin: auto;
+						height: 100%;
+						display: block;
+						max-width: 100%;
+						object-fit: cover;
+						transition: transform 0.3s;
+					}
+	
+				}
+			}
+
+			&[products] {
+
+				border-radius: 0px;
+				margin-bottom: 100px;
+				background-color:var(--dark-color);
+				
+				div {
+					padding: 0px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+
+					@media (prefers-color-scheme: light) {
+						>h3 {
+							color: var(--text-color);
+						}
+		
+						>h4 {
+							color: var(--text-color);
+						}
+	
+						>p:last-child {
+							width:95%;
+							color: var(--faint-color);
+						}
+		
+						>p:first-child {
+							width:95%;
+							color: var(--faint-color);
+						}
+					}
+
+				}
+
+				pic {
+
+					display: block;
+					width: 110px;
+					overflow: hidden;
+					position: relative;
+					padding-bottom: 20px;
+					border-radius: 0px;
+					background-color:none;
+	
+					img {
+						width: 100%;
+						margin: auto;
+						height: 100%;
+						display: block;
+						max-width: 100%;
+						object-fit: cover;
+						transition: transform 0.3s;
+					}
+	
+				}
+			}
+
+			&[hero] {
+
+				border-radius: 0px;
+				margin-bottom: 100px;
+				background-color: transparent;
+
+				div {
+					padding: 0px;
+
+					>h3 {
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+
 				}
 
 			}
@@ -88,7 +793,7 @@ layout-boxes {
 				}
 
 				>p:first-child {
-					font-size: 12px;
+					font-size: 17px;
 					padding-bottom: 0;
 					margin-bottom: 5px;
 					display: inline-block;

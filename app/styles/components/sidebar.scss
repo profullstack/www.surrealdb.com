@@ -15,7 +15,7 @@ sidebar {
 	align-items:flex-start;
 	overscroll-behavior:contain;
 	transform:translate3d(0, 0, 0);
-	background-color:var(--sidebar-color);
+	background-color:var(--back-color);
 
 	@include media(max-width-600) {
 		width:80%;
@@ -40,7 +40,6 @@ sidebar {
 			transition:color 0.5s;
 			color:var(--text-color);
 			background:var(--sidebar-color);
-			box-shadow:0 0 30px 30px var(--sidebar-color);
 
 			&:hover {
 				color:var(--hover-color);
@@ -80,8 +79,7 @@ sidebar {
 					text-align:center;
 					align-items:center;
 					justify-content:center;
-					background:var(--sidebar-color);
-					box-shadow:0 -20px 30px var(--sidebar-color);
+					background:var(--back-color);
 				}
 
 				p {
