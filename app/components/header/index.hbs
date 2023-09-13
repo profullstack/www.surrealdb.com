@@ -1,8 +1,4 @@
-<div class="announcement">
-	<h4><a href="https://surrealdb.world/"><img inline src="/static/img/surrealdbworld.svg" alt="SurrealDB World" /></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://surrealdb.world/">Join us in September</a></h4>
-</div>
-
-<header>
+<header route={{route-name}}>
 
 	<content route={{route-name}}>
 
@@ -16,71 +12,23 @@
 
 			<Header::Links::Item @link="index" @text="Home" />
 
-			<Header::Links::Item @link="install" @text="Install" />
-
 			<Header::Links::Item @link="community" @text="Community" />
 
-			<Header::Links::Drop @text="Product" @selected={{or (includes (route-name) (array "why" "features" "releases" "roadmap")) (begs-with (route-name) "usecase")}}>
-				<main>
-					<Header::Links::Drop::Item @link="why" @text="Why SurrealDB?" @desc="Understand why SurrealDB is the ultimate cloud database.">
-						<i class="fal fa-circle-question"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link="features" @text="Features" @desc="Get a detailed overview of all of SurrealDB's technical features.">
-						<i class="fal fa-list-check"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link="releases" @text="Releases" @desc="Keep track of the notable updates and improvements for every SurrealDB product release in chronological order.">
-						<i class="fal fa-rocket-launch"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link="roadmap" @text="Roadmap" @desc="See what we have planned for SurrealDB, and see the features and functionality which has already been implemented.">
-						<i class="fal fa-road"></i>
-					</Header::Links::Drop::Item>
-				</main>
-				<subs>
-					<Header::Links::Drop::Item @link={{url "github"}} @text="GitHub">
-						<i class="fab fa-github"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "discord"}} @text="Discord">
-						<i class="fab fa-discord"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "twitter"}} @text="Twitter">
-						<i class="fab fa-twitter"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "instagram"}} @text="Instagram">
-						<i class="fab fa-instagram"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "linkedin"}} @text="LinkedIn">
-						<i class="fab fa-linkedin"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "reddit"}} @text="Reddit">
-						<i class="fab fa-reddit"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "youtube"}} @text="YouTube">
-						<i class="fab fa-youtube"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "stackoverflow"}} @text="Stack Overflow">
-						<i class="fab fa-stack-overflow"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "threads"}} @text="Threads">
-						<i class="fab fa-instagram"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "medium"}} @text="Medium">
-						<i class="fab fa-medium"></i>
-					</Header::Links::Drop::Item>
-					<Header::Links::Drop::Item @link={{url "dev"}} @text="Dev">
-						<i class="fab fa-dev"></i>
-					</Header::Links::Drop::Item>
-				</subs>
-			</Header::Links::Drop>
+			<Header::Links::Item @link="products" @text="Products" />
+
+			<Header::Links::Item @link="careers" @text="Careers" />
+
+			<Header::Links::Item @link="features" @text="Features" />
+
+			<Header::Links::Item @link="releases" @text="Releases" />
+
+			<Header::Links::Item @link="install" @text="Install" />
 
 			<Header::Links::Item @link="docs" @text="Docs" />
-
-			<Header::Links::Item @link="blog" @text="Blog" />
 
 			<Button::Thicker @link={{url "github"}}>
 				<i class="fa fa-star"></i> <span>Star us on GitHub</span>
 			</Button::Thicker>
-
-			<Signup::Newsletter />
 
 		</Header::Links>
 

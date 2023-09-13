@@ -10,7 +10,7 @@
 
 	{{#if this.posts.length}}
 
-		<Layout::Text>
+		{{!-- <Layout::Text>
 			<h1><img inline src="/static/img/text.svg" alt="SurrealDB" /> blog</h1>
 		</Layout::Text>
 
@@ -20,7 +20,7 @@
 			<p>To stay up-to-date with new blog articles, future product releases, documentation updates, and access to SurrealDB Cloud, subscribe to our email newsletter above, or follow us on <Link @link={{url "twitter"}}>Twitter</Link>, <Link @link={{url "dev"}}>Dev</Link>, or <Link @link={{url "medium"}}>Medium</Link>.</p>
 		</Layout::Text>
 
-		<Layout::Gap mini />
+		<Layout::Gap mini /> --}}
 
 		<Layout::Boxes cols-3-to-2-to-1>
 			{{#each this.posts as |post i|}}

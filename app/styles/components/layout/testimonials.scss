@@ -1,6 +1,11 @@
 layout-testimonials {
 
+	width:100%;
 	display:block;
+	position:relative;
+	padding:0px 0 0px 0;
+	background-position: right;
+	background-repeat:no-repeat;
 
 	content {
 
@@ -52,8 +57,6 @@ layout-testimonials {
 
 								&:hover {
 
-									box-shadow:0px 5px 20px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.1);
-
 									img {
 										transform:scale(1.05);
 									}
@@ -73,14 +76,12 @@ layout-testimonials {
 							text-align:left;
 							position:relative;
 							margin:0 0 30px 0;
-							border-radius:16px;
-							background-color:var(--boxes-color);
-							box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.1);
+							border-radius:0px;
 
 							> div {
 
-								padding:20px;
-								display:flex;
+								padding-right:20px;
+								padding-bottom:20px;
 								position:relative;
 								flex-direction:row;
 
@@ -107,16 +108,15 @@ layout-testimonials {
 
 										name {
 											display:block;
-											font-size:14px;
+											font-size:19px;
+											color:#ffffff;
 											font-weight:bold;
 											padding-right:5px;
-											transition:color 0.3s;
-											color:var(--text-color);
 										}
 
 										user {
 											display:block;
-											font-size:14px;
+											font-size:19px;
 											font-weight:bold;
 											padding-right:5px;
 											transition:color 0.3s;
@@ -125,7 +125,7 @@ layout-testimonials {
 
 										bull {
 											display:block;
-											font-size:14px;
+											font-size:19px;
 											padding-right:5px;
 											transition:color 0.3s;
 											color:var(--faint-color);
@@ -133,10 +133,10 @@ layout-testimonials {
 
 										date {
 											display:block;
-											font-size:14px;
+											font-size:19px;
 											padding-right:5px;
 											transition:color 0.3s;
-											color:var(--faint-color);
+											color:rgba(255, 255, 255, 0.7);
 										}
 
 									}
@@ -147,10 +147,10 @@ layout-testimonials {
 										padding-top:8px;
 
 										text {
-											font-size:14px;
+											font-size:19px;
 											line-height:1.5;
 											transition:color 0.3s;
-											color:var(--text-color);
+											color:var(--same-color);
 										}
 
 									}
@@ -168,7 +168,7 @@ layout-testimonials {
 										> div:nth-of-type(1) {
 
 											name:first-child, user:first-child {
-												color:var(--hover-color);
+												color: #222;
 											}
 
 										}

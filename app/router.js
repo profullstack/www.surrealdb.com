@@ -16,7 +16,14 @@ Router.map(function () {
 	this.route('github');
 	this.route('install');
 	this.route('license');
+	this.route('ml');
+	this.route('ix');
+	this.route('lq');
+	this.route('ql');
+	this.route('cf');
+	this.route('kv');
 	this.route('media');
+	this.route('products');
 	this.route('opensource');
 	this.route('releases');
 	this.route('roadmap');

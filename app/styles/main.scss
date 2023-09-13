@@ -4,23 +4,6 @@ html {
 	scroll-padding-top:6rem;
 }
 
-.announcement {
-    width:auto;
-	padding:15px;
-	margin-top:10px;
-	margin-left:10px;
-	margin-right:10px;
-	border-radius:6px;
-    text-align:center;
-	display:inline-block;
-	background-size:cover;
-    background-color:#080C16;
-	background-repeat:no-repeat;
-	background-position:center top;
-	font-family:var(--system-font-app);
-	background-image:url("/static/img/surrealdbworld.png");
-}
-
 body {
 
 	width:100vw;
@@ -41,20 +24,22 @@ body {
 
 section {
 
-	body > &:nth-child(odd) {
-		background-color:rgba(0,0,0,0);
+	&[dark] {
+		width:100%;
+		margin:0 auto;
+		background-color:var(--dark-color);
 	}
 
-	body > &:nth-child(even) {
-		background-color:rgba(0,0,0,0.1);
-		@media (prefers-color-scheme: dark) {
-			background-color:rgba(0,0,0,0.1);
-		}
-		@media (prefers-color-scheme: light) {
-			background-color:rgba(100,100,100,0.05);
-		}
-	}
-
+	&[pink] {
+		width:100%;
+		margin:0 auto;
+		background: rgb(255,0,160);
+		background: -moz-linear-gradient(120deg, rgba(255,0,160,1) 0%, rgba(150,0,255,1) 100%);
+		background: -webkit-linear-gradient(120deg, rgba(255,0,160,1) 0%, rgba(150,0,255,1) 100%);
+		background: linear-gradient(120deg, rgba(255,0,160,1) 0%, rgba(150,0,255,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00a0",endColorstr="#9600ff",GradientType=1);
+	}	
+	
 	@include media(max-width-750) {
 		padding:50px 0;
 	}

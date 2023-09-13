@@ -2,16 +2,17 @@
 	@title="SurrealDB | Install"
 	@description="Install SurrealDB quickly and easily. It can either be installed from a binary image, or run from within Docker on macOS, Linux, Windows, or in the Cloud."
 />
+<Layout::Gap small />
 
-<Layout::Head why>
-	<Layout::Text text-m>
-		<h1>Install <img inline src="/static/img/text.svg" alt="SurrealDB" /></h1>
-		<p>There are a number of ways of running SurrealDB. It can either be installed from a binary image, or it can be run from within Docker. Once installed, the <Ascua::Prism::Inline @language="bash" @code="surreal" /> command is a single executable which can be used to backup, interact with, and run SurrealDB server instances.</p>
-		<p>After installing with any of the available options. Check out the <Link @link="docs.introduction.start">getting started </Link> guide</p>
-	</Layout::Text>
-</Layout::Head>
+<Layout::Text text-l>
+	<h1>How to install</h1>
+	<p>There are a number of ways of running SurrealDB. It can either be installed from a binary image, or it can be run from within Docker. Once installed, the <Ascua::Prism::Inline @language="bash" @code="surreal" /> command is a single executable which can be used to backup, interact with, and run SurrealDB server instances.</p>
+	<p>After installing with any of the available options. Check out the <Link @link="docs.introduction.start">getting started </Link> guide</p>
+</Layout::Text>
 
-<Layout::Blocks main-c as |block|>
+<Layout::Gap mini />
+
+<Layout::Blocks main-l as |block|>
 	<block>
 		<h4>
 			<i class="fab fa-apple font-20 m-r-10"></i> Install on macOS
@@ -21,11 +22,6 @@
 			brew install surrealdb/tap/surreal
 		</Code>
 	</block>
-</Layout::Blocks>
-
-<Layout::Gap mini />
-
-<Layout::Blocks main-c as |block|>
 	<block>
 		<h4>
 			<i class="fab fa-linux font-20 m-r-10"></i> Install on Linux
@@ -39,7 +35,7 @@
 
 <Layout::Gap mini />
 
-<Layout::Blocks main-c as |block|>
+<Layout::Blocks main-l as |block|>
 	<block>
 		<h4>
 			<i class="fab fa-windows font-20 m-r-10"></i> Install on Windows
@@ -57,11 +53,6 @@
 			scoop install surreal
 		</Code>
 	</block>
-</Layout::Blocks>
-
-<Layout::Gap mini />
-
-<Layout::Blocks main-c as |block|>
 	<block>
 		<h4>
 			<i class="fab fa-docker font-20 m-r-10"></i> Run using Docker

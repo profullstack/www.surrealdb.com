@@ -4,76 +4,45 @@
 	<meta name="description" content="Join the fastest-growing database company of all time">
 </Meta::Tags>
 
-<Layout::Head careers>
+<Layout::Hero careers>
 	<Layout::Text text-l>
 		<h1>
-			<img inline src="/static/img/text.svg" alt="SurrealDB" /> Careers
+			Careers at Surreal
 		</h1>
-		<p>Join the fastest-growing database company of all time. We are seeking to <span gradient>hire the best</span> - people who care deeply about the work they do, and care about the people with whom they create and promote the product.</p>
+		<h2>Join the fastest-growing database company of all time. We are seeking to gradient hire the best - people who care deeply about the work they do, and care about the people with whom they create and promote the product.</h2>
 	</Layout::Text>
-</Layout::Head>
+</Layout::Hero>
 
-<Layout::Blocks main-l as |block|>
-	<block>
-		<photo>
-			<img src="/static/img/careers/whatissurrealdb.png" />
-		</photo>
-	</block>
-	<block flex col middle>
-		<h3>What is SurrealDB?</h3>
-		<p>The field of database technology is vast and ever-evolving, with SurrealDB leading the charge in innovation and sparking major transformations. At this time, SurrealDB is experiencing exponential growth, positioning it as the fastest-growing database in history. As the pioneering force in the next generation of serverless databases, SurrealDB is set to redefine the landscape of database technology.</p>
-	</block>
-</Layout::Blocks>
+<section clear>
 
-<Layout::Gap mini />
+	<Layout::Gap small />
 
-<Layout::Blocks main-r as |block|>
-	<block flex col middle>
-		<h3>Making an impact</h3>
-		<p>Seize the opportunity to become part of the SurrealDB team and realise the potential of your impact, not just within the company, but on the global community at large. With SurrealDB, you're not just embracing the future of serverless databases, you are helping to shape it.</p>
-	</block>
-	<block>
-		<photo>
-			<img src="/static/img/careers/makeanimpact.png" />
-		</photo>
-	</block>
-</Layout::Blocks>
+	<Layout::Boxes cols-2-to-1>
+		<Layout::Boxes::Item careers2 @title="What is SurrealDB?" @image="/static/img/img.png" @text="The field of database technology is vast and ever-evolving, with SurrealDB leading the charge in innovation and sparking major transformations. At this time, SurrealDB is experiencing exponential growth, positioning it as the fastest-growing database in history. As the pioneering force in the next generation of serverless databases, SurrealDB is set to redefine the landscape of database technology." />
+		<Layout::Boxes::Item careers3 @title="Making an impact" @image="/static/img/img.png" @text="Seize the opportunity to become part of the SurrealDB team and realise the potential of your impact, not just within the company, but on the global community at large. With SurrealDB, you're not just embracing the future of serverless databases, you are helping to shape it." />
+	</Layout::Boxes>
 
-<Layout::Gap large />
+	<Layout::Gap line />
 
-<Layout::Boxes cols-3-to-2-to-1>
-	<Layout::Boxes::Item @image="/static/img/careers/careers1.png"  />
-	<Layout::Boxes::Item @image="/static/img/careers/careers2.png" />
-	<Layout::Boxes::Item @image="/static/img/careers/careers3.png" />
-	<Layout::Boxes::Item @image="/static/img/careers/careers4.png" />
-	<Layout::Boxes::Item @image="/static/img/careers/careers5.png" />
-	<Layout::Boxes::Item @image="/static/img/careers/careers6.png" />
-</Layout::Boxes>
+	<Layout::Boxes cols-3-to-2-to-1>
+		<Layout::Boxes::Item white @image="/static/img/careers/careers1.png"  />
+		<Layout::Boxes::Item white @image="/static/img/careers/careers2.png" />
+		<Layout::Boxes::Item white @image="/static/img/careers/careers3.png" />
+		<Layout::Boxes::Item white @image="/static/img/careers/careers4.png" />
+		<Layout::Boxes::Item white @image="/static/img/careers/careers5.png" />
+		<Layout::Boxes::Item white @image="/static/img/careers/careers6.png" />
+	</Layout::Boxes>
 
-<Layout::Gap large />
+	<Layout::Gap large />
 
-<Layout::Text text-m id="positions">
-	<h2>Our <span gradient>perks</span> and <span gradient>benefits</span></h2>
-</Layout::Text>
+	<section pink>
 
-<Layout::Gap mini />
+		<Layout::Gap small />
 
-<Layout::Boxes cols-3-to-2-to-1>
-	<Layout::Boxes::Item @tick={{true}} @label="Balanced work life" />
-	<Layout::Boxes::Item @tick={{true}} @label="Competitive salary and equity" />
-	<Layout::Boxes::Item @tick={{true}} @label="401(k) Plan (US)" />
-	<Layout::Boxes::Item @tick={{true}} @label="5 weeks paid vacation" />
-	<Layout::Boxes::Item @tick={{true}} @label="Parental leave" />
-	<Layout::Boxes::Item @tick={{true}} @label="Equipment and accessories" />
-	<Layout::Boxes::Item @tick={{true}} @label="Team events and offsites" />
-	<Layout::Boxes::Item @tick={{true}} @label="Health insurance" />
-</Layout::Boxes>
+		<Layout::Github />
 
-<Layout::Gap large />
+		<Layout::Gap small />
 
-<Layout::Text text-c id="positions">
-	<h2>There are currently no vacancies</h2>
-	<h3>Please visit this page regularly to stay updated on any new job openings.</h3>
-</Layout::Text>
+	</section>
 
-<Layout::Gap large />
+</section>

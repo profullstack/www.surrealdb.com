@@ -4,14 +4,67 @@ layout-hero {
 	width:100%;
 	display:block;
 	position:relative;
+	background-size:cover;
+	height:100vh;
 	padding:120px 0 50px 0;
 	background-repeat:no-repeat;
-	background-size:1254px 662px;
-	background-position:600px 0px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
 
-	@include media(max-width-768) {
-		top:0px;
+	@include media(max-width-960) {
+		top:-120px;
+		height:auto;
 		padding:0px 0 50px 0;
+	}
+
+	&[products] {
+		height:auto;
+		padding:120px 0 150px 0;
+		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/products/hero.jpg");
+	}
+
+	&[index] {
+		height:auto;
+		padding:120px 0 150px 0;
+		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/hero.jpg");
+
+	}
+
+	&[community] {
+		height:auto;
+		padding:120px 0 150px 0;
+	}
+
+	&[lq], &[cf], &[ix], &[ml] {
+		height:auto;
+		padding:120px 0 150px 0;
+	}
+
+	&[careers] {
+		height:auto;
+		padding:350px 0 150px 0;
+		background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("/static/img/careers/hero.png");
+
+		@include media(max-width-960) {
+			top:0px;
+			height:auto;
+			padding:0px 0 50px 0;
+		}
+	}
+
+	&[community] {
+		height:auto;
+		padding:350px 0 150px 0;
+		background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("/static/img/community/hero.jpg");
+
+		@include media(max-width-960) {
+			top:0px;
+			height:auto;
+			padding:0px 0 50px 0;
+		}
 	}
 
 	content {
@@ -36,9 +89,11 @@ layout-hero {
 
 		h1 {
 
-			width:65%;
+			width:80%;
+			font-size:90px;
+			line-height:1;
 			margin:0 0 10px 0;
-			font-family:'Poppins';
+			font-family:'SF Pro Display';
 
 			img {
 				height:45px;
@@ -56,13 +111,8 @@ layout-hero {
 			}
 
 			@include media(max-width-1449) {
-				font-size:46px;
+				font-size:60px;
 				img { height:34px; }
-			}
-
-			@include media(max-width-1250) {
-				font-size:38px;
-				img { height:28px; }
 			}
 
 			@include media(max-width-1024) {
@@ -82,7 +132,7 @@ layout-hero {
 
 		h2 {
 
-			width:60%;
+			width:70%;
 			font-size:27px;
 
 			@include media(max-width-1250) {

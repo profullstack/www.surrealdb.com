@@ -4,19 +4,18 @@ h1 {
 	line-height: 1.1;
 	font-weight: 600;
 	letter-spacing: -1px;
-	font-family: "Poppins";
+	font-family: "SF Pro Display";
 	transition: color 0.3s;
 	color: var(--text-color);
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
+    display: block;
 
 	span[gradient] {
-		background: -moz-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-		background: -webkit-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
+		border: 1px solid #fff;
+    border-radius: 5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: inline-block;
 	}
 
 	img[inline] {
@@ -45,27 +44,42 @@ h1 {
 		}
 	}
 
+	&[light] {
+		color: var(--text-color);
+	}
+
+	&[same] {
+		color:var(--same-color);
+	}
+
+	&[black] {
+		color:var(--dark-color);
+	}
+
 }
 
 h2 {
 
-	font-size: 38px;
 	font-weight: 600;
-	line-height: 1.5;
+	line-height: 1.2;
+	font-size: 3.875rem;
 	letter-spacing: -1px;
-	font-family: "Poppins";
+	font-family: "SF Pro Display";
 	transition: color 0.3s;
+	color:var(--text-color);
+	letter-spacing: -.035rem;
 	color: var(--text-color);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 
 	span[gradient] {
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
 		background: -moz-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
 		background: -webkit-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00a0",endColorstr="#9600ff",GradientType=1);
 	}
 
 	img[inline] {
@@ -89,23 +103,25 @@ h2 {
 
 h3 {
 
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: 500;
 	line-height: 1.2;
 	letter-spacing: -1px;
-	font-family: "Poppins";
+	font-family: "SF Pro Display";
 	transition: color 0.3s;
+	letter-spacing: -.035rem;
 	color: var(--text-color);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 
 	span[gradient] {
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
 		background: -moz-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
 		background: -webkit-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00a0",endColorstr="#9600ff",GradientType=1);
 	}
 
 	img[inline] {
@@ -124,7 +140,7 @@ h4 {
 	font-weight: 600;
 	line-height: 1.2;
 	letter-spacing: -1px;
-	font-family: "Poppins";
+	font-family: "SF Pro Display";
 	transition: color 0.3s;
 	color: var(--text-color);
 	text-rendering: optimizeLegibility;
@@ -150,12 +166,14 @@ h4 {
 
 h5 {
 
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 1.2;
-	letter-spacing: -1px;
-	font-family: "Poppins";
+	width: 70%;
+	font-weight: 500;
+	margin: 0 15% 0 15%;
+	line-height: 1.29412;
+	font-size: 30px;
+	font-family: "SF Pro Display";
 	transition: color 0.3s;
+	letter-spacing: -0.03em;
 	color: var(--text-color);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -164,7 +182,168 @@ h5 {
 		vertical-align: middle;
 	}
 
+	@include media(max-width-1449) {
+		width: 100%;
+		font-size: 30px;
+	}
+
+	@include media(max-width-600) {
+		width: 100%;
+		font-size: 26px;
+		margin-bottom: 0px;
+
+		img[inline] {
+			height: 28px;
+		}
+	}
+
+	&[light] {
+		color: var(--text-color);
+	}
+
+	&[faint] {
+		color: var(--faint-color);
+	}
+
+	&[same] {
+		color:var(--same-color);
+	}
+
 }
+
+h6 {
+	display: block;
+	font-size: 60px;
+	line-height: 1.1;
+	font-weight: 600;
+	letter-spacing: -1px;
+	font-family: "SF Pro Display";
+	transition: color 0.3s;
+	color: var(--text-color);
+
+	span[gradient] {
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
+		background: -moz-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
+		background: -webkit-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff00a0",endColorstr="#9600ff",GradientType=1);
+	}
+
+	img[inline] {
+		height: 45px;
+	}
+
+	i {
+		vertical-align: middle;
+	}
+
+	@include media(max-width-1449) {
+		font-size: 46px;
+
+		img[inline] {
+			height: 34px;
+		}
+	}
+
+	@include media(max-width-600) {
+		width: 100%;
+		font-size: 38px;
+		margin-bottom: 0px;
+
+		img[inline] {
+			height: 28px;
+		}
+	}
+
+	&[light] {
+		color: var(--text-color);
+	}
+
+	&[same] {
+		color:var(--same-color);
+	}
+
+	&[black] {
+		color:var(--back-color);
+	}
+
+}
+
+g {
+		width: 70%;
+		display: block;
+		font-size: 90px;
+		line-height: 1.1;
+		font-weight: 500;
+		letter-spacing: -5px;
+		font-family: "SF Pro Display";
+		background-clip: text;
+		transition: color 0.3s;
+		color: var(--text-color);
+		-webkit-background-clip: text;
+		text-rendering: optimizeLegibility;
+		-webkit-text-fill-color: transparent;
+		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
+		background: -moz-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
+		background: -webkit-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
+	
+		span[gradient] {
+		border-radius: 5rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		display: inline-block;
+		padding-bottom: 0.5rem;
+		border: 1px solid #fff;
+		}
+	
+		img[inline] {
+			height: 45px;
+		}
+	
+		i {
+			vertical-align: middle;
+		}
+	
+		@include media(max-width-1449) {
+			font-size: 46px;
+	
+			img[inline] {
+				height: 34px;
+			}
+		}
+	
+		@include media(max-width-600) {
+			width: 100%;
+			font-size: 38px;
+			margin-bottom: 0px;
+	
+			img[inline] {
+				height: 28px;
+			}
+		}
+	
+	}
+
+b {
+	font-size: 1.88235rem;
+	text-align: left;
+	width: 700px;
+	font-weight: 500;
+	line-height: 1.29412;
+	letter-spacing: -0.03em;
+	font-family: "Inter";
+	transition: color 0.3s;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	i {
+		vertical-align: middle;
+	}
+	
+	}
 
 li {
 	font-size: 16px;
@@ -180,11 +359,15 @@ p {
 
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.7;
+	line-height: 1.5;
 	color: var(--faint-color);
 	font-family: var(--system-font-app);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+
+	&[white] {
+		color: var(--text-color);
+	}
 
 	img[inline] {
 		height: 14px;
@@ -202,7 +385,7 @@ blockquote {
 	padding: 20px;
 	color: var(--faint-color);
 	border-radius: 0 12px 12px 0;
-	background-color: var(--boxes-color);
+	background-color: var(--dark-color);
 	border-left: 3px solid var(--hover-color);
 
 	&[text] {
@@ -255,7 +438,7 @@ blockquote {
 	codes,
 	code {
 		box-shadow: none;
-		background-color: var(--darker-color);
+		background-color: var(--back-color);
 	}
 
 }
@@ -344,7 +527,7 @@ h3,
 h4,
 h5 {
 	&:not(:last-child) {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 }
 
