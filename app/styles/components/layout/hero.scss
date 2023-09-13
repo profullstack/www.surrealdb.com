@@ -20,27 +20,22 @@ layout-hero {
 		padding:0px 0 50px 0;
 	}
 
+	&[index] {
+		height:auto;
+		padding:120px 0 150px 0;
+		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/hero.jpg");
+	}
+
 	&[products] {
 		height:auto;
 		padding:120px 0 150px 0;
 		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/products/hero.jpg");
 	}
 
-	&[index] {
-		height:auto;
-		padding:120px 0 150px 0;
-		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/hero.jpg");
-
-	}
-
-	&[community] {
-		height:auto;
-		padding:120px 0 150px 0;
-	}
-
 	&[lq], &[cf], &[ix], &[ml] {
 		height:auto;
 		padding:120px 0 150px 0;
+		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/products/hero.jpg");
 	}
 
 	&[careers] {
