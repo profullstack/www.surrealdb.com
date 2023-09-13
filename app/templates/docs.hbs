@@ -26,6 +26,12 @@
 				<Layout::Helm::Menu::Item @link="docs.introduction.features" @text="Features" selected={{begs-with (route-name) "docs.introduction.features"}} />
 				<Layout::Helm::Menu::Item @link="docs.introduction.releases" @text="Releases" selected={{begs-with (route-name) "docs.introduction.releases"}} />
 				<Layout::Helm::Menu::Item @link="docs.introduction.architecture" @text="Architecture" selected={{begs-with (route-name) "docs.introduction.architecture"}} />
+				<Layout::Helm::Menu::Item @link="docs.introduction.mongo" @text="SurrealDB for MongoDB developers" selected={{begs-with
+				(route-name) "docs.introduction.mongo" }} />
+				<Layout::Helm::Menu::Item @link="docs.introduction.sql" @text="SurrealDB for SQL developers" selected={{begs-with
+				(route-name) "docs.introduction.sql" }} />
+				{{!-- <Layout::Helm::Menu::Item @link="docs.introduction.neo4j" @text="SurrealDB for Neo4j developers" selected={{begs-with
+				(route-name) "docs.introduction.neo4j" }} /> --}}
 			</subs>
 
 			<Layout::Helm::Menu::Item @link="docs.installation" @text="Installation" selected={{begs-with (route-name) "docs.installation"}} />
@@ -238,8 +244,6 @@
 		(route-name) "docs.surrealql.transactions" }} />
 	<Layout::Helm::Menu::Item @link="docs.surrealql.comments" @text="Comments" selected={{begs-with
 		(route-name) "docs.surrealql.comments" }} />
-
-
 </subs>
 
 			<Layout::Helm::Menu::Item @link="docs.security" @text="Security"
