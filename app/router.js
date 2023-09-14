@@ -21,6 +21,7 @@ Router.map(function () {
 	this.route('lq');
 	this.route('ql');
 	this.route('cf');
+	this.route('CF');
 	this.route('kv');
 	this.route('media');
 	this.route('products');
