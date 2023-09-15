@@ -145,22 +145,17 @@ layout-hero {
 
 			}
 
-			@include media(max-width-1449) {
-				font-size:60px;
-				img { height:34px; }
+			@include media(max-width-1250) {
+				width:90%;
 			}
 
-			@include media(max-width-1024) {
+			@include media(max-width-962) {
 				width:100%;
-				font-size:46px;
-				img { height:34px; }
+				font-size:70px;
 			}
 
-			@include media(max-width-600) {
-				width:100%;
-				font-size:38px;
-				margin-bottom:0px;
-				img { height:28px; }
+			@include media(max-width-768) {
+				font-size:52px;
 			}
 
 		}
@@ -168,20 +163,14 @@ layout-hero {
 		h2 {
 
 			width:70%;
-			font-size:27px;
+			font-size:28px;
 
 			@include media(max-width-1250) {
+				width:100%;
+			}
+			
+			@include media(max-width-768) {
 				font-size:24px;
-			}
-
-			@include media(max-width-1024) {
-				width:100%;
-				font-size:28px;
-			}
-
-			@include media(max-width-600) {
-				width:100%;
-				font-size:26px;
 			}
 
 		}
@@ -193,10 +182,6 @@ layout-hero {
 			color:var(--text-color);
 
 			@include media(max-width-1250) {
-				width:90%;
-			}
-
-			@include media(max-width-962) {
 				width:100%;
 			}
 
@@ -208,22 +193,6 @@ layout-hero {
 			font-size:18px;
 			margin-bottom:30px;
 			color:var(--faint-color);
-
-			@include media(max-width-1450) {
-				width:55%;
-			}
-
-			@include media(max-width-1250) {
-				width:50%;
-			}
-
-			@include media(max-width-1024) {
-				width:100%;
-			}
-
-			@include media(max-width-768) {
-				width:100%;
-			}
 
 		}
 
