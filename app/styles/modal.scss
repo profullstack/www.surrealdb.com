@@ -56,7 +56,7 @@ app-modal-cover {
 			padding:50px;
 		}
 
-		@include media(max-width-750) {
+		@include media(max-width-768) {
 			width:90vw;
 			padding:50px 30px;
 		}

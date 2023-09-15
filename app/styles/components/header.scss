@@ -100,7 +100,7 @@ header {
 					white-space:nowrap;
 					border-radius:50px;
 
-					@include media(max-width-750) {
+					@include media(max-width-768) {
 						display:none;
 					}
 

@@ -202,7 +202,7 @@ layout-blog {
 
 		}
 
-		@include media(max-width-750) {
+		@include media(max-width-768) {
 
 			grid-column: auto / span 12;
 
@@ -291,7 +291,7 @@ layout-blog {
 
 		}
 
-		@include media(max-width-750) {
+		@include media(max-width-768) {
 
 			grid-column: auto / span 12;
 
