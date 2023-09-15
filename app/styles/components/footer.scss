@@ -17,10 +17,6 @@ footer {
 				justify-content:space-between;
 			}
 
-			@include media(max-width-750) {
-				padding:50px 0 0px 0;
-			}
-
 			> div {
 
 				@include media(max-width-750) {

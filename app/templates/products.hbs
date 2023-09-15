@@ -33,25 +33,22 @@
 	</Layout::Boxes>
 </Layout::Hero>
 
-<section black>
+<section dark>
 
-	<Layout::Gap small />
+	<img src="/static/img/illustrations/illustrations2.png" width="100%" />
 
-	<Layout::Text text-l>
+	<Layout::Text text-c>
 		<h6>Getting started with SurrealDB.</h6>
 	</Layout::Text>
 
 	<Layout::Gap mini />
 
-	<Layout::Text text-l>
+	<Layout::Text text-c>
 		<h5>SurrealDB makes building and scaling realtime apps dramatically quicker and easier. Get started by  <Link @link="docs.installation">installing the server </Link> , and jump into our <Link @link="docs.introduction.start"> getting started guide </Link> to learn how to insert and query data in SurrealDB in minutes.</h5>
+		<Button::Thicker @link="docs.introduction.start">
+			<span>Get started with SurrealDB</span> <i class="fas fa-arrow-right"></i>
+		</Button::Thicker>
 	</Layout::Text>
-
-	<Layout::Gap small />
-
-	<Layout::Boxes cols-1>
-		<Layout::Boxes::Item @image="/static/img/illustrations/illustrations2.png" hover />
-	</Layout::Boxes>
 
 	<Layout::Gap large />
 
