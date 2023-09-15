@@ -58,7 +58,7 @@ button, a[button] {
 		background: transparent;
 	    border: 2px solid #fff;
 		color: var(--text-color);
-    	transition: background-color .2s ease;
+		transition: all .4s ease-in-out;
 
 		@include media(max-width-642) {
 			width:100%;
@@ -96,7 +96,7 @@ button, a[button] {
 		background: transparent;
 		color:var(--text-color);
     	border:2px solid #ffffff;
-    	transition: background-color .2s ease;
+		transition: all .4s ease-in-out;
 
 		@include media(max-width-642) {
 			width:100%;
@@ -118,7 +118,7 @@ button, a[button] {
 			color: var(--back-color);
     		background-color: #ffffff;
     		border: 2px solid #ffffff;
-    		transition: background-color .2s ease;
+    		transition: all .4s ease-in-out;
 		}
 
 		@media (prefers-color-scheme: light) {
@@ -128,7 +128,7 @@ button, a[button] {
 			background: transparent;
 			color:var(--text-color);
 			border:2px solid #000000;
-			transition: background-color .2s ease;
+    		transition: all .4s ease-in-out;
 
 			@include media(max-width-642) {
 				width:100%;
@@ -150,7 +150,7 @@ button, a[button] {
 				color: var(--back-color);
 				background-color: #000000;
 				border: 2px solid #000000;
-				transition: background-color .2s ease;
+				transition: all .4s ease-in-out;
 			}
 
 		}
