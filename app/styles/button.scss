@@ -79,7 +79,7 @@ button, a[button] {
 			color: var(--back-color);
     		background-color: #fff;
     		border: 2px solid #fff;
-    		transition: background-color .2s ease;
+    		transition: all .4s ease-in-out;
 		}
 
 		&:hover i {
