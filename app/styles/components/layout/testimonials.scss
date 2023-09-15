@@ -168,7 +168,8 @@ layout-testimonials {
 										> div:nth-of-type(1) {
 
 											name:first-child, user:first-child {
-												color: #222;
+												transition:color 0.3s;
+												color:var(--hover-color);
 											}
 
 										}
