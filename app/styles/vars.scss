@@ -16,7 +16,8 @@
 	--sidebar-color:#131429;	// Colour of mobile sidebar menu
 	--footer-color:#000000;	// Colour of footer
 	--same-color:#ffffff;		// Same colourfrom light to dark mode
-	--black-color:#000000;		// Same colourfrom light to dark modef
+	--black-color:#000000;		// Same colourfrom light to dark mode
+	--lighter-color:#afb5c0;	// Same colourfrom light to dark modef
 
 	@media (prefers-color-scheme: light) {
 		--text-color:#ffffff;		// Colour of primary text
@@ -36,6 +37,7 @@
 		--footer-color:#000000;	// Colour of footer
 		--same-color:#ffffff;		// Same colourfrom light to dark mode
 		--black-color:#000000;		// Same colourfrom light to dark mode
+		--lighter-color:#afb5c0;	// Same colourfrom light to dark modef
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -56,6 +58,7 @@
 		--footer-color:#000000;	// Colour of footer
 		--same-color:#ffffff;		// Same colourfrom light to dark mode
 		--black-color:#000000;		// Same colourfrom light to dark mode
+		--lighter-color:#afb5c0;	// Same colourfrom light to dark modef
 	}
 
 }
