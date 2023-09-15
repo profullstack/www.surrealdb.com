@@ -4,7 +4,7 @@ gap {
 	height:100px;
 	display:block;
 
-	@include media(max-width-750) {
+	@include media(max-width-768) {
 		height:50px;
 	}
 
@@ -32,7 +32,7 @@ gap {
 		height:100px;
 		display:block;
 
-		@include media(max-width-750) {
+		@include media(max-width-768) {
 			height:50px;
 		}
 
@@ -44,8 +44,8 @@ gap {
 		height:200px;
 		display:block;
 
-		@include media(max-width-750) {
-			height:150px;
+		@include media(max-width-768) {
+			height:100px;
 		}
 
 	}

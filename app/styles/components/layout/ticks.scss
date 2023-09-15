@@ -20,7 +20,7 @@ layout-ticks {
 			grid-template-columns:repeat(1, 1fr);
 		}
 
-		@include media(max-width-550) {
+		@include media(max-width-768) {
 			padding:30px;
 		}
 
