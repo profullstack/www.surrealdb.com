@@ -53,7 +53,7 @@ layout-hero {
 		
 	}
 
-	&[install], &[releases], &[docs], &[features], &[opensource] {
+	&[install], &[releases], &[license], &[security], &[docs], &[features], &[opensource] {
 		height:auto;
 		padding:120px 0 150px 0;
 		background:linear-gradient(-60deg, rgba(255,0,160,1) 0%, rgba(135,0,255,0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
@@ -125,8 +125,8 @@ layout-hero {
 		h1 {
 
 			width:80%;
-			font-size:90px;
 			line-height:1;
+			font-size:90px;
 			margin:0 0 10px 0;
 			font-family:'SF Pro Display';
 
@@ -177,7 +177,7 @@ layout-hero {
 
 		h3 {
 
-			width:70%;
+			width:80%;
 			font-size:24px;
 			color:var(--text-color);
 
