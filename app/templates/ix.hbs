@@ -22,7 +22,7 @@
 
 	<Layout::Gap small />
 
-	<Layout::Boxes cols-2-to-1>
+	<Layout::Boxes cols-3-to-2-to-1>
 		<Layout::Boxes::Item text-l light @title="Support for multiple index types" @image="/static/img/products/traditional-indexing.png" @text="SurrealDB has support for traditional indexing, unique indexes and constraints, full-text search indexes, and vector-embedding indexing. We reimagined how indexing might be implemented - opting for a completely custom-built indexing engine, which sits within the SurrealDB core itself." />
 		<Layout::Boxes::Item text-l light @title="Indexing support regardless of deployment environment" @image="/static/img/products/ix-embedded.png" @text="The indexing engine is agnostic to its deployment environment - whether running on top of IndexedDB in the browser, an embedded run-time in Rust or Python, or distributed over multiple nodes in a highly-scalable cluster. The indexing engine is integrated with the SurrealQL query language natively, without the need for an additional external query language, or for indexing-specific functions or plugins" />
 		<Layout::Boxes::Item text-l light @title="Built within the ACID transaction model of the database" @image="/static/img/products/acid.png" @text="The indexing logic is handled directly within the ACID transaction model of the database. For a developer using SurrealDB, this means that any indexed data is consistent and in-sync with the data in the database." />
