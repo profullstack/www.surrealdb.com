@@ -193,9 +193,7 @@ h5 {
 	}
 
 	@include media(max-width-600) {
-		width: 90%;
 		font-size: 24px;
-		margin-bottom: 0px;
 
 		img[inline] {
 			height: 28px;
