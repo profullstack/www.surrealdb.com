@@ -6,37 +6,26 @@
 		<meta name="description" content="To stay up-to-date with new blog articles, future product releases, and documentation updates, subscribe to our email newsletter below.">
 	</Meta::Tags>
 
-	<Layout::Gap mini />
+	<Layout::Hero blog>
+		<Layout::Text text-l>
+			<h1>SurrealDB Blog</h1>
+			<h3>To stay up-to-date with new blog articles, future product releases, documentation updates, and access to SurrealDB Cloud, subscribe to our email newsletter above, or follow us on <Link @link={{url "twitter"}}>Twitter</Link>, <Link @link={{url "dev"}}>Dev</Link>, or <Link @link={{url "medium"}}>Medium</Link>.</h3>
+		</Layout::Text>
+	</Layout::Hero>
+
+	<Layout::Gap large />
 
 	{{#if this.posts.length}}
 
-		{{!-- <Layout::Text>
-			<h1><img inline src="/static/img/text.svg" alt="SurrealDB" /> blog</h1>
-		</Layout::Text>
-
-		<Layout::Gap tiny />
-
-		<Layout::Text>
-			<p>To stay up-to-date with new blog articles, future product releases, documentation updates, and access to SurrealDB Cloud, subscribe to our email newsletter above, or follow us on <Link @link={{url "twitter"}}>Twitter</Link>, <Link @link={{url "dev"}}>Dev</Link>, or <Link @link={{url "medium"}}>Medium</Link>.</p>
-		</Layout::Text>
-
-		<Layout::Gap mini /> --}}
-
 		<Layout::Boxes cols-3-to-2-to-1>
 			{{#each this.posts as |post i|}}
-				{{#if (eq 0 i)}}
-					<LinkTo @route="blog.post" @model={{post.slug}} full side>
-						<Layout::Boxes::Item @image={{blog-image post.image "main"}} @stamp={{date-format post.time "LL"}} @title={{post.title}} @label={{post.label}} @text={{markdown post.text inline=true}} />
-					</LinkTo>
-				{{else}}
 					<LinkTo @route="blog.post" @model={{post.slug}}>
 						<Layout::Boxes::Item @image={{blog-image post.image "small"}} @stamp={{date-format post.time "LL"}} @title={{post.title}} @label={{post.label}} @text={{markdown post.text inline=true}} />
 					</LinkTo>
-				{{/if}}
 			{{/each}}
 		</Layout::Boxes>
 
-		<Layout::Gap small />
+		<Layout::Gap large />
 
 	{{/if}}
 
