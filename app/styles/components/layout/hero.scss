@@ -1,12 +1,9 @@
 layout-hero {
 
-	top:-120px;
 	width:100%;
 	display:block;
 	position:relative;
 	background-size:cover;
-	height:100vh;
-	padding:120px 0 50px 0;
 	background-repeat:no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -15,7 +12,6 @@ layout-hero {
 	background-position: center;
 
 	@include media(max-width-960) {
-		top:-120px;
 		height:auto;
 		padding:0px 0 50px 0;
 	}
@@ -23,19 +19,25 @@ layout-hero {
 	&[index] {
 		height:auto;
 		padding:120px 0 150px 0;
-		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/hero.jpg");
+		background:linear-gradient(-60deg, rgba(255,0,160,1) 0%, rgba(135,0,255,0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
 	}
 
 	&[products] {
 		height:auto;
 		padding:120px 0 150px 0;
-		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/products/hero.jpg");
+		background:linear-gradient(-60deg, rgba(255,0,160,1) 0%, rgba(135,0,255,0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
 	}
 
 	&[lq], &[cf], &[ix], &[ml] {
 		height:auto;
 		padding:120px 0 150px 0;
-		background-image:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 80%), url("/static/img/products/hero.jpg");
+		background:linear-gradient(-60deg, rgba(255,0,160,1) 0%, rgba(135,0,255,0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
+	}
+
+	&[install], &[releases], &[docs], &[features], &[opensource] {
+		height:auto;
+		padding:120px 0 150px 0;
+		background:linear-gradient(-60deg, rgba(255,0,160,1) 0%, rgba(135,0,255,0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
 	}
 
 	&[careers] {
@@ -46,7 +48,7 @@ layout-hero {
 		@include media(max-width-960) {
 			top:0px;
 			height:auto;
-			padding:0px 0 50px 0;
+			padding:120px 0 150px 0;
 		}
 	}
 
@@ -58,7 +60,7 @@ layout-hero {
 		@include media(max-width-960) {
 			top:0px;
 			height:auto;
-			padding:0px 0 50px 0;
+			padding:120px 0 150px 0;
 		}
 	}
 
@@ -146,9 +148,25 @@ layout-hero {
 
 		}
 
+		h3 {
+
+			width:70%;
+			font-size:24px;
+			color:var(--text-color);
+
+			@include media(max-width-1250) {
+				width:90%;
+			}
+
+			@include media(max-width-950) {
+				width:100%;
+			}
+
+		}
+
 		p {
 
-			width:60%;
+			width:100%;
 			font-size:18px;
 			margin-bottom:30px;
 			color:var(--faint-color);
