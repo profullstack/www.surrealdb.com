@@ -398,6 +398,37 @@ layout-boxes {
 				}
 			}
 
+			&[careers4] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/careers/careers7.jpg");
+
+				div {
+					padding: 60px;
+
+					>h3 {
+						width:75%;
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--same-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--same-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--same-color);
+					}
+				}
+			}
+
 			&[meettheteam] {
 
 				height:auto;
