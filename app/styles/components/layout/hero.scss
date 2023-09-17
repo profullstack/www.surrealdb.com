@@ -78,6 +78,18 @@ layout-hero {
 		}
 	}
 
+	&[meettheteam] {
+		height:auto;
+		padding:350px 0 150px 0;
+		background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url("/static/img/meettheteam/hero.jpg");
+
+		@include media(max-width-960) {
+			top:0px;
+			height:auto;
+			padding:120px 0 50px 0;
+		}
+	}
+
 	&[community] {
 		height:auto;
 		padding:350px 0 150px 0;
