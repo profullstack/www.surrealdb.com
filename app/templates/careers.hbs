@@ -30,21 +30,32 @@
 
 	<Layout::Gap large />
 
+	<Layout::Text text-l>
+		<h5>"When I first learned about SurrealDB last fall, it looked like an excellent open-source database that did many things in one database. I wanted it to be real!  I sent a pull request to add support for it, followed by an unsolicited design proposal to implement a scalable 'change feeds' feature on top of it. A few months later, I became a full-time SurrealDB employee. Today, I'm one of the SurrealDB maintainers because I want to build a database of my dreams with you."</h5>
+		<h4><span faint>Yusuke Kuoka, Senior Software Engineer at SurrealDB</span></h4>
+	</Layout::Text>
+
+	<Layout::Gap large />
+
+	<Layout::Boxes cols-1>
+		<Layout::Boxes::Item @image="/static/img/careers/careers7.jpg" hover />
+	</Layout::Boxes>
+
+	<Layout::Gap large />
+
 </section>
 
 <section dark>
 
 	<Layout::Gap large />
 
-	<Layout::Text text-l>
-		<h5>"When I first learned about SurrealDB last fall, it looked like an excellent open-source database that did many things in one database. I wanted it to be real!  I sent a pull request to add support for it, followed by an unsolicited design proposal to implement a scalable 'change feeds' feature on top of it. A few months later, I became a full-time SurrealDB employee. Today, I'm one of the SurrealDB maintainers because I want to build a database of my dreams with you."</h5>
-		<h4><span faint>Yusuke Kuoka, Senior Software Engineer at SurrealDB</span></h4>
-	</Layout::Text>
-
-	<Layout::Gap small />
-
-	<Layout::Boxes cols-1>
-		<Layout::Boxes::Item @image="/static/img/careers/careers7.jpg" hover />
+	<Layout::Boxes cols-2-to-1>
+		<Link @link="community" mini>
+			<Layout::Boxes::Item community @title="Community" @image="/static/img/img.png" @text="Join our community of maintainers, contributors, users, and surreal enthusiasts and help us make SurrealDB better for developers and organisations all around the world." />
+		</Link>
+		<Link @link="meettheteam" mini>
+			<Layout::Boxes::Item meettheteam1 @title="Meet the team" @image="/static/img/img.png" @text="SurrealDB comprises an exceptionally talented team of engineers and accomplished leaders, each boasting a rich background in the realms of databases and cloud services." />
+		</Link>
 	</Layout::Boxes>
 
 	<Layout::Gap large />
