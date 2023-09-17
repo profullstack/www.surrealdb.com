@@ -33,6 +33,12 @@
 				<p>{{@text}}</p>
 			{{/if}}
 
+			{{#if @buttontext}}
+				<Button::Thicker @link={{@url}}>
+					<span>{{@buttontext}}</span> <i class="fas fa-arrow-right"></i>
+				</Button::Thicker>
+			{{/if}}
+
 			{{yield}}
 
 		</div>
