@@ -504,7 +504,7 @@ layout-boxes {
 				}
 			}
 
-			&[meettheteam] {
+			&[team] {
 
 				height:auto;
 				background-size:cover;
@@ -535,12 +535,12 @@ layout-boxes {
 				}
 			}
 
-			&[meettheteam1] {
+			&[team1] {
 
 				height:auto;
 				background-size:cover;
   				background-position: center;
-				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/meettheteam/hero.jpg");
+				background-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/static/img/team/hero.jpg");
 
 				div {
 					padding: 60px;

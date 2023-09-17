@@ -8,7 +8,7 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
 	this.route('careers');
-	this.route('meettheteam');
+	this.route('team');
 	this.route('app');
 	this.route('community');
 	this.route('discord');

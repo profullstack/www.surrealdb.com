@@ -78,10 +78,10 @@ layout-hero {
 		}
 	}
 
-	&[meettheteam] {
+	&[team] {
 		height:auto;
 		padding:350px 0 150px 0;
-		background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/static/img/meettheteam/hero.jpg");
+		background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/static/img/team/hero.jpg");
 
 		@include media(max-width-960) {
 			top:0px;
