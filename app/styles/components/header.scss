@@ -16,7 +16,7 @@ header {
 		flex-direction: row;
 		justify-content: space-between;
 
-		@include media(max-width-1301) {
+		@include media(max-width-1401) {
 			padding-top:14px;
 		}
 
@@ -28,7 +28,7 @@ header {
 			align-items:center;
 			justify-content:center;
 
-			@include media(max-width-1301) {
+			@include media(max-width-1401) {
 				margin:20px 0;
 			}
 
@@ -61,7 +61,7 @@ header {
 				cursor:pointer;
 			}
 
-			@include media(max-width-1301) {
+			@include media(max-width-1401) {
 				display:flex;
 			}
 
@@ -113,7 +113,7 @@ header {
 
 				&:not([button]) {
 
-					@include media(max-width-1301) {
+					@include media(max-width-1401) {
 						display:none;
 					}
 
@@ -142,7 +142,7 @@ header {
 				transition:color 0.5s, border 0.5s;
 				border-bottom:3px solid transparent;
 
-				@include media(max-width-1301) {
+				@include media(max-width-1401) {
 					display:none;
 				}
 
