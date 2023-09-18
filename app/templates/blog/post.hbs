@@ -3,7 +3,7 @@
 	@title="SurrealDB | {{this.model.title}}"
 	@description={{this.model.text}}
 />
-
+<section blog>
 <Layout::Gap blog />
 
 <Layout::Helm blog>
@@ -91,14 +91,6 @@
 
 	<Layout::Gap small />
 
-	<Layout::Blocks cols-1 main-c>
-		<Layout::Blocks::Block>
-			<h3>Other blog posts</h3>
-		</Layout::Blocks::Block>
-	</Layout::Blocks>
-
-	<Layout::Gap mini />
-
 	<Layout::Boxes cols-2-to-1>
 		{{#if this.prev}}
 			<LinkTo @route="blog.post" @model={{this.prev.slug}}>
@@ -119,10 +111,12 @@
 	<Layout::Gap mini />
 
 	<Layout::Text>
-		<p>To stay up-to-date with new blog articles, future product releases, and documentation updates, subscribe to our email newsletter below, follow us on <Link @link={{url "x"}}>Twitter</Link>, or follow us on <Link @link={{url "dev"}}>Dev</Link>.</p>
+		<p same>To stay up-to-date with new blog articles, future product releases, and documentation updates, subscribe to our email newsletter below, follow us on <Link @link={{url "x"}}>Twitter</Link>, or follow us on <Link @link={{url "dev"}}>Dev</Link>.</p>
 		<Signup::Newsletter bordered thicker />
 	</Layout::Text>
 
 	<Layout::Gap small />
+
+</section>
 
 </section>
