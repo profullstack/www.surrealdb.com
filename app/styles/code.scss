@@ -24,7 +24,7 @@ code, :not(pre) > code[class*="language-"] {
 	font-size:inherit;
 	font-family:var(--system-font-mono);
 	background-color:var(--dark-color);
-	border-radius: 0.3em;
+	border-radius:0;
 
 	a:hover & {
 		cursor:pointer;
@@ -52,6 +52,7 @@ pre[class*="language-"] {
 	font-size:15px;
 	text-align:left;
 	white-space:pre;
+	border-radius:0;
 	line-height:1.75;
 	text-shadow:none;
 	word-break:normal;
