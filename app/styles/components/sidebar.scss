@@ -15,7 +15,7 @@ sidebar {
 	align-items:flex-start;
 	overscroll-behavior:contain;
 	transform:translate3d(0, 0, 0);
-	background-color:var(--back-color);
+	background-color:var(--sidebar-color);
 
 	@include media(max-width-600) {
 		width:80%;
@@ -101,7 +101,7 @@ sidebar {
 					padding:20px 0 20px 0;
 					color:var(--text-color);
 					transition:color 0.5s, border 0.5s;
-					border-bottom:2px solid var(--border-color);
+					border-bottom:2px solid rgba(255,255,255,0.03);
 
 					&:not([button]):hover {
 						color:var(--hover-color);
