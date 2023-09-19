@@ -81,8 +81,9 @@
 </p>
 <p>
     For more SurrealQL examples,
-    see the <Link @link="docs.surrealql.statements.create">create</Link>
-    and <Link @link="docs.surrealql.statements.insert">insert</Link> pages.
+    see the <Link @link="docs.surrealql.statements.create">create</Link>, 
+    <Link @link="docs.surrealql.statements.insert">insert</Link>
+    and <Link @link="docs.surrealql.statements.relate">relate</Link> pages.
 </p>
 
 <Layout::Table filled>
@@ -97,55 +98,44 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-create.surql">
-                        db.createCollection("person")
+                        CREATE (John:Person {name:'John'}),
+                        (Jane:Person {name: 'Jane'})
                     </Code>
 				</td>
 				<td>
-                    <Code @name="docs-surrealql-create-person.surql">
-                        CREATE person
-                    </Code>
-                </td>
-			</tr>
-			<tr>
-				<td>
-                    <Code @name="docs-surrealql-cypher-insert-one.surql">
-                        db.person.insertOne({
-                            name: "John"
-                        })
-                    </Code>
-                    <p>Collection implicitly created if it doesn't exist</p>
-				</td>
-				<td>
-                    <Code @name="docs-surrealql-insert-one.surql">
-                        INSERT INTO person {
-                            name: "John"
-                        }
+                    <Code @name="docs-surrealql-insert-many-graph.surql">
+                        INSERT INTO person [
+                            {id: "John", name: "John"},
+                            {id: "Jane", name: "Jane"}
+                        ]
                     </Code>
                     <p>Table implicitly created if it doesn't exist</p>
                 </td>
 			</tr>
 			<tr>
 				<td>
-                    <Code @name="docs-surrealql-cypher-insert-many.surql">
-                        db.person.insertMany([
-                            {name: "John"},
-                            {name: "Jane"},
-                        ])
+                    <Code @name="docs-surrealql-cypher-relate.surql">
+                        MATCH (p:Person {name:'Jane'}),
+                        (pr:Product {name:'iPhone'})
+                        CREATE (p)-[:ORDER]->(pr)
                     </Code>
 				</td>
 				<td>
-                    <Code @name="docs-surrealql-insert-many.surql">
-                        INSERT INTO person [
-                            {name: "John"},
-                            {name: "Jane"}
-                        ]
+                    <Code @name="docs-surrealql-relate-statement.surql">
+                        RELATE person:Jane -> order -> product:iPhone
                     </Code>
+                    <p>
+                        There are many differences between how
+                        SurrealDB and Neo4j do graph relations.
+                        Check out the <Link @link="docs.surrealql.statements.relate">relate docs</Link> for more.
+                    </p>
                 </td>
 			</tr>
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-index.surql">
-                        db.person.createIndex({name: 1})
+                        CREATE INDEX personNameIndex
+                        FOR (p:Person) ON (p.name)
                     </Code>
 				</td>
 				<td>
@@ -181,8 +171,8 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-find-all.surql">
-                        MATCH (person)
-                        RETURN person
+                        MATCH (p:Person)
+                        RETURN p
                     </Code>
 				</td>
 				<td>
@@ -195,8 +185,8 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-find-person.surql">
-                        MATCH (person)
-                        RETURN person.name
+                        MATCH (p:Person)
+                        RETURN p.name
                     </Code>
 				</td>
 				<td>
@@ -209,9 +199,9 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-find-where.surql">
-                        MATCH (person)
-                        WHERE person.name = "Jane"
-                        RETURN person.name
+                        MATCH (p:Person)
+                        WHERE p.name = "Jane"
+                        RETURN p.name
                     </Code>
 				</td>
 				<td>
@@ -226,9 +216,9 @@
 				<td>
                     <Code @name="docs-surrealql-cypher-find-explain.surql">
                         EXPLAIN
-                        MATCH (person)
-                        WHERE person.name = "Jane"
-                        RETURN person.name
+                        MATCH (p:Person)
+                        WHERE p.name = "Jane"
+                        RETURN p.name
                     </Code>
 				</td>
 				<td>
@@ -243,7 +233,7 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-count.surql">
-                        MATCH (person)
+                        MATCH (p:Person)
                         RETURN count(*) as person_count
                     </Code>
 				</td>
@@ -258,8 +248,8 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-distinct.surql">
-                        MATCH (person)
-                        RETURN distinct person.name
+                        MATCH (p:Person)
+                        RETURN distinct p.name
                     </Code>
 				</td>
 				<td>
@@ -273,8 +263,8 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-limit.surql">
-                        MATCH (person)
-                        RETURN person
+                        MATCH (p:Person)
+                        RETURN p
                         LIMIT 10
                     </Code>
 				</td>
@@ -288,22 +278,16 @@
 			</tr>
 			<tr>
 				<td>
-                    <Code @name="docs-surrealql-cypher-lookup.surql">
-                        db.review.aggregate([{
-                            "$lookup": {
-                                "from": "person",
-                                "localField": "person",
-                                "foreignField": "_id",
-                                "as": "person_detail"
-                            }
-                        }])
+                    <Code @name="docs-surrealql-cypher-relations.surql">
+                        MATCH (p:Person)-[:ORDER]->(pr:Product)
+                        RETURN p.name, pr.name
                     </Code>
 				</td>
 				<td>
-                    <Code @name="docs-surrealql-record-link-person.surql">
-                        SELECT *,
-                        person.* as person_detail
-                        FROM review
+                    <Code @name="docs-surrealql-graph-person.surql">
+                        SELECT name,
+                        ->order->product.name
+                        FROM person
                     </Code>
                 </td>
 			</tr>
@@ -329,11 +313,11 @@
 		<tbody>
 			<tr>
 				<td>
-                    <Code @name="docs-surrealql-cypher-update-one.surql">
-                        db.person.updateMany(
-                            { name: "Jane" },
-                            { $set: { last_name: "Doe" } }
-                        )
+                    <Code @name="docs-surrealql-cypher-update.surql">
+                        MATCH (p:Person) 
+                        WHERE p.name = "Jane" 
+                        SET p.last_name = 'Doe' 
+                        RETURN p
                     </Code>
 				</td>
 				<td>
@@ -347,10 +331,10 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-update-many.surql">
-                        db.person.updateMany(
-                            { name: "Jane" },
-                            { $unset: { last_name: 1 } }
-                        )
+                        MATCH (p:Person)  
+                        WHERE p.name = "Jane"  
+                        REMOVE p.last_name
+                        RETURN p
                     </Code>
 				</td>
 				<td>
@@ -385,9 +369,9 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-delete.surql">
-                        db.person.deleteMany(
-                            { name: "Jane" }
-                        )
+                        MATCH (p:Person) 
+                        WHERE p.name = "Jane" 
+                        DELETE p
                     </Code>
 				</td>
 				<td>
@@ -400,25 +384,29 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-delete-all.surql">
-                        db.person.deleteMany({})
+                        MATCH (p:Person) 
+                        DELETE p
                     </Code>
 				</td>
 				<td>
                     <Code @name="docs-surrealql-delete-all.surql">
                         DELETE person
                     </Code>
+                    <p>Node/Table still exists here but is empty</p>
                 </td>
 			</tr>
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-remove.surql">
-                        db.person.drop()
+                        MATCH (p:Person) 
+                        DELETE p
                     </Code>
 				</td>
 				<td>
                     <Code @name="docs-surrealql-remove-person.surql">
                         REMOVE TABLE person
                     </Code>
+                    <p>Node/Table no longer exists</p>
                 </td>
 			</tr>
 		</tbody>

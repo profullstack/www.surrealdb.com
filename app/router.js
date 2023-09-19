@@ -64,7 +64,7 @@ Router.map(function () {
 			this.route('architecture');
 			this.route('mongo');
 			this.route('sql');
-			// this.route('neo4j');
+			this.route('neo4j');
 		});
 
 		this.route('installation', function () {
