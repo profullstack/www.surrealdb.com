@@ -5,6 +5,13 @@ export default class extends Component {
 	@cache get model() {
 		return [
 			{
+				time: new Date('2023-09-13T00:00:00'),
+				name: 'Release v1.0.0',
+				path: 'section/releases/v1-0-0',
+				link: 'v1.0.0',
+				hash: 'v1-0-0',
+			},
+			{
 				time: new Date('2023-09-12T00:00:00'),
 				name: 'Release v1.0.0-beta.12',
 				path: 'section/releases/v1-0-0-beta-12',
