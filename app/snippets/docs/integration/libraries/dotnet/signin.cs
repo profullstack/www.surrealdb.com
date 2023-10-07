@@ -32,7 +32,7 @@ var authParams = new AuthParams
     Password = "123456"
 };
 
-Jwt jwt = await db.SignUp(authParams);
+Jwt jwt = await db.SignIn(authParams);
 
 public class AuthParams : ScopeAuth
 {
