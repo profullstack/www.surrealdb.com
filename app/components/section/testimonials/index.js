@@ -3,7 +3,6 @@ import { cache } from '@ascua/decorators';
 import { arg } from '@ascua/decorators';
 
 export default class extends Component {
-
 	@arg count = 100;
 
 	@cache get testimonials() {
@@ -17,7 +16,7 @@ export default class extends Component {
 			{
 				name: 'Jeff Delaney',
 				user: 'Web Developer and Tech Influencer, Fireship',
-				text: `"Now that it's at 1.0, I there is a pretty good use case to using it in some serious projects."`,
+				text: `"Now that it's at 1.0, there is a pretty good use case to using it in some serious projects."`,
 				img: '/static/img/logos/fireship.svg',
 			},
 			{
@@ -44,24 +43,11 @@ export default class extends Component {
 				text: `"Here at Yaacomm we are already using SurrealDB in a significant way for our backend infrastructure, however I believe SurrealDB can play an even bigger role in other areas as well. Being able to embed SurrealDB locally in Android and iOS apps could make it a perfect fit for local caching. Additionally, this would provide us with all the benefits of SurrealDB such as full-text searching and its graph based nature without relying on a network connection."`,
 				img: '/static/img/logos/yaacomm.png',
 			},
-			// {
-			// 	name: 'Laurence Job',
-			// 	user: 'Founder and Senior Developer, GridFusions',
-			// 	text: `"This looks great, thanks for publishing the event. I can't wait to use this in my projects and at work."`,
-			// },
-			// {
-			// 	name: '0xdjole1',
-			// 	text: `"I migrated half a project to SurrealDB and I get why it's called like that."`,
-			// },
 			{
 				name: 'Sebastian Wessel',
 				user: 'Senior Developer',
 				text: `"It's incredible what SurrealDB provides and also what's coming up in the near future. Embedding, scaling, machine learning, live queries... SurrealDB as an event store or persisted broker or IoT platform - I've so many ideas right now for the next project. Awesome!"`,
 			},
-			// {
-			// 	name: 'Josh-IG',
-			// 	text: `"I just finished a project using surrealdb in production. My whole team was really impressed, first DB I've ever actually enjoyed using and look forward to using again. The events system and futures are next level. Thanks!"`,
-			// },
 			{
 				name: 'Reza Qorbani',
 				user: 'Co-founder and CTO, Qualia',
@@ -70,5 +56,4 @@ export default class extends Component {
 			},
 		];
 	}
-
 }
