@@ -64,7 +64,7 @@ export default class extends Component {
 			// },
 			{
 				name: 'Reza Qorbani',
-				user: 'Co-Founder and CTO, Qualia',
+				user: 'Co-founder and CTO, Qualia',
 				text: `"SurrealDB looks amazing. Cloud-native Database written in Rust using SQL for structured and unstructured data, graph querying, full-text indexing, and geospatial querying, while supporting row-level permissions."`,
 				img: '/static/img/logos/qualia.png',
 			},
