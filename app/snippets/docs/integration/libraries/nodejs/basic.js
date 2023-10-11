@@ -1,12 +1,17 @@
-const { default: Surreal } = require('surrealdb.js');
+const { default: Surreal } = require('surrealdb.node');
 
 const db = new Surreal();
 
 async function main() {
-
 	try {
-		// Connect to the database
+
+		// Use any of these 3 connect methods to connect to the database
+		// 1.Connect to the database
 		await db.connect('http://127.0.0.1:8000/rpc');
+		// 2. Connect to database server
+		await db.connect('ws://127.0.0.1:8000');
+		// 3. Connect via rocksdb file
+		await db.connect(`rocksdb://${process.cwd()}/test.db`);
 
 		// Signin as a namespace, database, or root user
 		await db.signin({
@@ -15,10 +20,10 @@ async function main() {
 		});
 
 		// Select a specific namespace / database
-		await db.use({ns: 'test', db: 'test'});
+		await db.use({ ns: 'test', db: 'test' });
 
 		// Create a new person with a random id
-		let created = await db.create("person", {
+		let created = await db.create('person', {
 			title: 'Founder & CEO',
 			name: {
 				first: 'Tobie',
@@ -29,24 +34,23 @@ async function main() {
 		});
 
 		// Update a person record with a specific id
-		let updated = await db.merge("person:jaime", {
+		let updated = await db.merge('person:jaime', {
 			marketing: true,
 		});
 
 		// Select all people records
-		let people = await db.select("person");
+		let people = await db.select('person');
 
 		// Perform a custom advanced query
-		let groups = await db.query('SELECT marketing, count() FROM type::table($tb) GROUP BY marketing', {
-			tb: 'person',
-		});
-
+		let groups = await db.query(
+			'SELECT marketing, count() FROM type::table($tb) GROUP BY marketing',
+			{
+				tb: 'person',
+			}
+		);
 	} catch (e) {
-
 		console.error('ERROR', e);
-
 	}
-
 }
 
 main();
