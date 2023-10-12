@@ -7,7 +7,7 @@ ARGS:
     <file>    Path to the sql file to export
 
 OPTIONS:
-    -c, --conn <conn>    Remote database server url to connect to [default: https://cloud.surrealdb.com]
+    -e, --endpoint, --conn <conn>    Remote database server url to connect to [default: https://cloud.surrealdb.com]
         --db <db>        The database to export the data from
     -h, --help           Print help information
         --ns <ns>        The namespace to export the data from

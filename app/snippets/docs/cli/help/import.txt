@@ -7,7 +7,7 @@ ARGS:
     <file>    Path to the sql file to import
 
 OPTIONS:
-    -c, --conn <conn>    Remote database server url to connect to [default: https://cloud.surrealdb.com]
+    -e, --endpoint, --conn <conn>    Remote database server url to connect to [default: https://cloud.surrealdb.com]
         --db <db>        The database to import the data into
     -h, --help           Print help information
         --ns <ns>        The namespace to import the data into
