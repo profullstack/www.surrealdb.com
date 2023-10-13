@@ -15,12 +15,12 @@ async function main() {
 
 		// Signin as a namespace, database, or root user
 		await db.signin({
-			user: 'root',
-			pass: 'root',
+			username: 'root',
+			password: 'root',
 		});
 
 		// Select a specific namespace / database
-		await db.use({ ns: 'test', db: 'test' });
+		await db.use({ namespace: 'test', database: 'test' });
 
 		// Create a new person with a random id
 		let created = await db.create('person', {

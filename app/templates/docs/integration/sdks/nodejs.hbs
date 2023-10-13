@@ -82,7 +82,7 @@
 			<tr>
 				<td>
 					<a href="#use">
-						<Ascua::Prism::Inline @language="js" @code="async db.use({ ns, db })" />
+						<Ascua::Prism::Inline @language="js" @code="async db.use({ namespace, database })" />
 					</a>
 				</td>
 				<td>Switch to a specific namespace and database</td>
@@ -255,8 +255,8 @@
 
 			// Specify a namespace and database pair to use
 			await db.connect('https://cloud.surrealdb.com/rpc', {
-				ns: 'surrealdb',
-				db: 'docs',
+				namespace: 'surrealdb',
+				database: 'docs',
 			});
 
 			// Authenticate with an existing token
@@ -268,8 +268,8 @@
 			// Authenticate using a pair of credentials
 			await db.connect('https://cloud.surrealdb.com/rpc', {
 				auth: {
-					user: 'root',
-					pass: 'surrealdb',
+					username: 'root',
+					password: 'surrealdb',
 				},
 			});
 				},
@@ -298,8 +298,8 @@
 <Layout::Group {{waypoint "use"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="db.use({ ns, db })" /></h3>
-		<p>Switch to a specific namespace and database. If only the <code>ns</code> or <code>db</code> property is specified, the current connection details will be used to fill the other property.</p>
+		<h3><Ascua::Prism::Inline @language="ts" @code="db.use({ namespace, database })" /></h3>
+		<p>Switch to a specific namespace and database. If only the <code>namespace</code> or <code>database</code> property is specified, the current connection details will be used to fill the other property.</p>
 		<Layout::Table>
 			<table>
 				<thead>
@@ -311,7 +311,7 @@
 				<tbody>
 					<tr>
 						<td>
-							<code>ns</code>
+							<code>namespace</code>
 							<l yellow r>Initially required</l>
 						</td>
 						<td>
@@ -320,7 +320,7 @@
 					</tr>
 					<tr>
 						<td>
-							<code>db</code>
+							<code>database</code>
 							<l yellow r>Initially required</l>
 						</td>
 						<td>
@@ -331,7 +331,7 @@
 			</table>
 		</Layout::Table>
 		<Code @name="docs-integration-libraries-nodejs-use.js">
-			await db.use({ ns: 'surrealdb', db: 'docs' });
+			await db.use({ namespace: 'surrealdb', database: 'docs' });
 		</Code>
 	</Layout::Text>
 
@@ -356,7 +356,7 @@
 <Layout::Group {{waypoint "signup"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.signup({ NS, DB, SC, [...] })" /></h3>
+		<h3><Ascua::Prism::Inline @language="ts" @code="async db.signup({ namespace, database, scope, [...] })" /></h3>
 		<p>Signs up to a specific authentication scope.</p>
 		<Layout::Table>
 			<table>
@@ -369,7 +369,7 @@
 				<tbody>
 					<tr>
 						<td>
-							<code>NS</code>
+							<code>namespace</code>
 							<l yellow r>Required</l>
 						</td>
 						<td>
@@ -378,7 +378,7 @@
 					</tr>
 					<tr>
 						<td>
-							<code>DB</code>
+							<code>database</code>
 							<l yellow r>Required</l>
 						</td>
 						<td>
@@ -387,7 +387,7 @@
 					</tr>
 					<tr>
 						<td>
-							<code>SC</code>
+							<code>scope</code>
 							<l yellow r>Required</l>
 						</td>
 						<td>
@@ -399,13 +399,13 @@
 		</Layout::Table>
 		<Code @name="docs-integration-libraries-nodejs-signup.js">
 			const token = await db.signup({
-				NS: 'surrealdb',
-				DB: 'docs',
-				SC: 'user',
+				namespace: 'surrealdb',
+				database: 'docs',
+				scope: 'user',
 
 				// Also pass any properties required by the scope definition
 				email: 'info@surrealdb.com',
-				pass: '123456',
+				password: '123456',
 			});
 		</Code>
 	</Layout::Text>
@@ -430,7 +430,7 @@
 				<tbody>
 					<tr>
 						<td>
-							<code>user</code>
+							<code>username</code>
 							<l yellow r>Required for root, NS & DB</l>
 						</td>
 						<td>
@@ -439,7 +439,7 @@
 					</tr>
 					<tr>
 						<td>
-							<code>pass</code>
+							<code>password</code>
 							<l yellow r>Required for root, NS & DB</l>
 						</td>
 						<td>
@@ -448,7 +448,7 @@
 					</tr>
 					<tr>
 						<td>
-							<code>NS</code>
+							<code>namespace</code>
 							<l yellow r>Required for DB & SC</l>
 						</td>
 						<td>
@@ -457,7 +457,7 @@
 					</tr>
 					<tr>
 						<td>
-							<code>DB</code>
+							<code>database</code>
 							<l yellow r>Required for SC</l>
 						</td>
 						<td>
@@ -466,7 +466,7 @@
 					</tr>
 					<tr>
 						<td>
-							<code>SC</code>
+							<code>scope</code>
 						</td>
 						<td>
 							The scope to sign in to. Also pass any variables used in the scope
@@ -478,34 +478,34 @@
 		<Code @name="docs-integration-libraries-nodejs-signin.js">
 			// Authenticate with a root user
 			const token = await db.signin({
-				user: 'root',
-				pass: 'surrealdb',
+				username: 'root',
+				password: 'surrealdb',
 			});
 
 			// Authenticate with a Namespace user
 			const token = await db.signin({
-				NS: 'surrealdb',
-				user: 'tobie',
-				pass: 'surrealdb',
+				namespace: 'surrealdb',
+				username: 'tobie',
+				password: 'surrealdb',
 			});
 
 			// Authenticate with a Database user
 			const token = await db.signin({
-				NS: 'surrealdb',
-				DB: 'docs',
-				user: 'tobie',
-				pass: 'surrealdb',
+				namespace: 'surrealdb',
+				database: 'docs',
+				username: 'tobie',
+				password: 'surrealdb',
 			});
 
 			// Authenticate with a Scope user
 			const token = await db.signin({
-				NS: 'surrealdb',
-				DB: 'docs',
-				SC: 'user',
+				namespace: 'surrealdb',
+				database: 'docs',
+				scope: 'user',
 
 				// Also pass any properties required by the scope definition
 				email: 'info@surrealdb.com',
-				pass: '123456',
+				password: '123456',
 			});
 		</Code>
 	</Layout::Text>
