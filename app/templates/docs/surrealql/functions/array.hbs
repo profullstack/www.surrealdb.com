@@ -1343,7 +1343,7 @@
 		<h3>array::transpose</h3>
 		<p>The <code>array::transpose</code> is used to perform 2d array transposition but it's behavior in cases of arrays of differing sizes can be best described as taking in multiple arrays and 'layering' them on top of each other.</p>
 		<Code @name="docs-surrealql-functions-array-transpose.surql" text="API Definition">
-			array::union(array, array) -> array array
+			array::transpose(array, array) -> array array
 		</Code>
 		<p>The following example shows this function, and its output, when used in a <Link @link="docs.surrealql.statements.return"><code>RETURN</code></Link> statement:</p>
 		<codes vertical>
