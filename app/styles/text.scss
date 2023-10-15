@@ -157,6 +157,11 @@ h4 {
 		color: var(--faint-color);
 	}
 
+	&[yaacomm] {
+		width: 100%;
+		color: var(--faint-color);
+	}
+
 	@include media(max-width-768) {
 		font-size: 20px;
 
@@ -164,8 +169,6 @@ h4 {
 			height: 12px;
 		}
 	}
-
-	
 
 }
 
@@ -209,6 +212,11 @@ h5 {
 
 	&[same] {
 		color:var(--same-color);
+	}
+
+	&[yaacomm] {
+		width: 100%;
+		color: var(--faint-color);
 	}
 
 }
@@ -371,6 +379,10 @@ p {
 		color: var(--text-color);
 	}
 
+	&[same] {
+		color: var(--same-color);
+	}
+
 	img[inline] {
 		height: 14px;
 	}
@@ -464,7 +476,7 @@ n {
 	-webkit-font-smoothing: antialiased;
 
 	a {
-		color: var(--faint-color);
+		color: var(--same-color);
 	}
 
 }

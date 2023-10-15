@@ -10,6 +10,7 @@ Router.map(function () {
 	this.route('careers');
 	this.route('team');
 	this.route('app');
+	this.route('yaacomm');
 	this.route('community');
 	this.route('discord');
 	this.route('features');

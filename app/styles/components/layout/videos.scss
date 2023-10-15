@@ -111,6 +111,42 @@ layout-videos {
 
 			}
 
+			&[team] {
+
+				height:auto;
+				background-size:cover;
+  				background-position: center;
+
+				div {
+					padding: 30px;
+
+					>h3 {
+						font-size: 22px;
+						margin-bottom:0px;
+						color: var(--same-color);
+					}
+	
+					>h4 {
+						color: var(--lighter-color);
+					}
+
+					>p:last-child {
+						width:95%;
+						color: var(--lighter-color);
+					}
+	
+					>p:first-child {
+						width:95%;
+						color: var(--lighter-color);
+					}
+
+					p {
+						width:95%;
+						color:var(--same-color);
+					}
+				}
+			}
+
 			&[dark] {
 				background-color:var(--dark-color);
 				div {
@@ -118,6 +154,10 @@ layout-videos {
 					padding:90px;
 				}
 
+			}
+
+			&[darker] {
+				background-color:#0b0b0c;
 			}
 
 			&[wider] {

@@ -32,21 +32,21 @@ export default class extends Component {
 				img: '/static/img/logos/figment.png',
 			},
 			{
-				name: 'Travis Barney',
-				user: 'Principal Engineer, Vivint',
-				text: `"Very excited to put these capabilities into practice."`,
-				img: '/static/img/logos/vivint.png',
-			},
-			{
-				name: 'Julian Mills',
-				user: 'Lead Developer, Yaacomm',
-				text: `"Here at Yaacomm we are already using SurrealDB in a significant way for our backend infrastructure, however I believe SurrealDB can play an even bigger role in other areas as well. Being able to embed SurrealDB locally in Android and iOS apps could make it a perfect fit for local caching. Additionally, this would provide us with all the benefits of SurrealDB such as full-text searching and its graph based nature without relying on a network connection."`,
-				img: '/static/img/logos/yaacomm.png',
+				name: 'Chris Hay',
+				user: 'CTO, IBM iX',
+				text: `"It's fast, small, can run on browser, edge and cloud.  It can handle large data.  It can run in-memory like redis or disk like sqlite and it can run multi-cluster.   It can sync between cloud and edge.  And to top of it off, it can also run as a graphdb. It's interesting."`,
+				img: '/static/img/logos/ibmix.svg',
 			},
 			{
 				name: 'Sebastian Wessel',
 				user: 'Senior Developer',
 				text: `"It's incredible what SurrealDB provides and also what's coming up in the near future. Embedding, scaling, machine learning, live queries... SurrealDB as an event store or persisted broker or IoT platform - I've so many ideas right now for the next project. Awesome!"`,
+			},
+			{
+				name: 'Travis Barney',
+				user: 'Principal Engineer, Vivint',
+				text: `"Very excited to put these capabilities into practice."`,
+				img: '/static/img/logos/vivint.png',
 			},
 			{
 				name: 'Reza Qorbani',
