@@ -61,7 +61,6 @@ sidebar {
 					top:0;
 					left:0;
 					right:0;
-					bottom:100px;
 					display:flex;
 					overflow:auto;
 					position:absolute;
@@ -110,6 +109,11 @@ sidebar {
 
 					&[selected] {
 						border-bottom:2px solid var(--hover-color);
+					}
+
+					@include media(max-width-768) {
+						font-size:16px;
+						padding:15px 0 15px 0;
 					}
 
 					&[button] {
