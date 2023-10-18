@@ -38,6 +38,7 @@ Router.map(function () {
 	this.route('legal', function () {
 		this.route('terms');
 		this.route('privacy');
+		this.route('code-of-conduct');
 		this.route('cookies');
 		this.route('security');
 		this.route('giveaway');
