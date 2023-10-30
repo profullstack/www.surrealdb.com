@@ -1,11 +1,14 @@
 UPDATE person SET railcard =
-	IF age <= 10 THEN
+	IF age <= 10 {
 		'junior'
-	ELSE IF age <= 21 THEN
+	}
+	ELSE IF age <= 21 {
 		'student'
-	ELSE IF age >= 65 THEN
+	}
+	ELSE IF age >= 65 {
 		'senior'
-	ELSE
+	}
+	ELSE {
 		NULL
-	END
+	}
 ;

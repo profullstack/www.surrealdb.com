@@ -1,7 +1,5 @@
-IF $scope = "admin" THEN
-	( SELECT * FROM account )
-ELSE IF $scope = "user" THEN
-	( SELECT * FROM $auth.account )
-ELSE
-	[]
-END
+IF $scope = "admin" {
+	SELECT * FROM account
+} ELSE IF $scope = "user" {
+  SELECT * FROM $auth.account
+}
