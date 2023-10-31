@@ -7,14 +7,14 @@ async function main() {
 		// Connect to the database
 		await db.connect('http://127.0.0.1:8000/rpc', {
 			// Set the namespace and database for the connection
-			ns: 'test',
-			db: 'test',
+			namespace: 'test',
+			database: 'test',
 
 			// Set the authentication details for the connection
 			auth: {
-				NS: 'test',
-				DB: 'test',
-				SC: 'user',
+				namespace: 'test',
+				database: 'test',
+				scope: 'user',
 				user: 'info@surrealdb.com',
 				pass: 'my-secret-password',
 			},

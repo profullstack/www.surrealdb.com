@@ -1,15 +1,15 @@
 const db = new Surreal();
 db.connect('ws://localhost:8000/rpc', {
-	ns: 'test',
-	db: 'test',
+	namespace: 'test',
+	database: 'test',
 });
 
 db.signin({
-	NS: 'test',
-	DB: 'test',
+	namespace: 'test',
+	database: 'test',
 
 	// Provide the name of the scope
-	SC: 'user',
+	scope: 'user',
 
 	// Provide the variables used by the signin query
 	email: 'john@doe.org',

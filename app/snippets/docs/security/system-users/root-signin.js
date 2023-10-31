@@ -1,10 +1,10 @@
 const db = new Surreal();
 db.connect('ws://localhost:8000/rpc', {
-	ns: 'test',
-	db: 'test',
+	namespace: 'test',
+	database: 'test',
 });
 
 db.signin({
-	user: 'john',
-	pass: 'VerySecurePassword!',
+	username: 'john',
+	password: 'VerySecurePassword!',
 });
