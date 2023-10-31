@@ -15,8 +15,8 @@ async function main() {
 				namespace: 'test',
 				database: 'test',
 				scope: 'user',
-				user: 'info@surrealdb.com',
-				pass: 'my-secret-password',
+				username: 'info@surrealdb.com',
+				password: 'my-secret-password',
 			},
 		});
 
