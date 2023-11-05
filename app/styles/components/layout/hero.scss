@@ -22,10 +22,10 @@ layout-hero {
 		align-items:center;
 		flex-direction:column;
 		justify-content:center;
-		background-image:url("/static/img/illustrations/hero.svg"), linear-gradient(-60deg, rgba(255, 0, 160, 1) 0%, rgba(135, 0, 255, 0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
+		background-image:url("/static/img/illustrations/hero.png"), linear-gradient(-60deg, rgba(255, 0, 160, 1) 0%, rgba(135, 0, 255, 0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
 		
 		@include media(max-width-1301) {
-			background-image:url("/static/img/illustrations/hero1.svg"), linear-gradient(-60deg, rgba(255, 0, 160, 1) 0%, rgba(135, 0, 255, 0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
+			background-image:url("/static/img/illustrations/hero1.png"), linear-gradient(-60deg, rgba(255, 0, 160, 1) 0%, rgba(135, 0, 255, 0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
 		}
 
 		@include media(max-width-960) {
