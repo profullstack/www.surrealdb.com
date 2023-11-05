@@ -170,7 +170,7 @@ layout-hero {
 	&[gettingstarted] {
 		height:auto;
 		padding:250px 80px 250px 80px;
-		background-image:url("/static/img/illustrations/gettingstarted.jpg");
+		background-image:url("/static/img/illustrations/gettingstarted.png");
 
 		@include media(max-width-960) {
 			padding:250px 40px 250px 40px;
