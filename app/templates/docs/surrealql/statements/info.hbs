@@ -16,7 +16,7 @@
 	<h3>Statement syntax</h3>
 	<Code @name="docs-surrealql-statements-info-syntax.typescript" text="SQL Syntax">
 		INFO FOR [
-			KV
+			ROOT
 			| NS | NAMESPACE
 			| DB | DATABASE
 			| SCOPE @scope
@@ -35,10 +35,10 @@
 	<Layout::Gap mini />
 
 	<h4>System information</h4>
-	<p>The top-level <code>KV</code> command returns information regarding the namespaces which exists within the SurrealDB system.</p>
+	<p>The top-level <code>ROOT</code> command returns information regarding the namespaces which exists within the SurrealDB system.</p>
 	<blockquote yellow text="Info">You must be authenticated as a top-level root user to execute this command.</blockquote>
 	<Code @name="docs-surrealql-statements-info-kv.surql">
-		INFO FOR KV;
+		INFO FOR ROOT;
 	</Code>
 
 	<Layout::Gap mini />
@@ -58,7 +58,7 @@
 	<blockquote yellow text="Info">You must be authenticated as a top-level root user, a namespace user, or a database user to execute this command.</blockquote>
 	<blockquote yellow text="Info">You must have a <code>NAMESPACE</code> and a <code>DATABASE</code> selected before running this command.</blockquote>
 	<Code @name="docs-surrealql-statements-info-db.surql">
-		INFO FOR DB;
+		INFO FOR SCOPE scope;
 	</Code>
 
 	<Layout::Gap mini />
