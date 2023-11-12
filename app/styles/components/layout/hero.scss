@@ -94,6 +94,21 @@ layout-hero {
 
 	}
 
+	&[docs], &[blog-article] {
+		padding:0;
+		height:auto;
+		height:96px;
+		background:linear-gradient(-60deg, rgba(255,0,160,1) 0%, rgba(135,0,255,0.8) 50%, rgba(0, 0, 0, 0.4) 110%);
+		background-color:#000000;
+
+		@include media(max-width-960) {
+			top:0px;
+			padding:0;
+			height:96px;
+		}
+
+	}
+
 	&[careers] {
 		height:auto;
 		padding:350px 0 150px 0;
