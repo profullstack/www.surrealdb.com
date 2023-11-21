@@ -173,6 +173,14 @@
 			</tr>
 			<tr>
 				<td>
+					<a href="#info">
+						<Ascua::Prism::Inline @language="csharp" @code="await db.Info<T>()" />
+					</a>
+				</td>
+				<td>Returns the record of an authenticated scope user</td>
+			</tr>
+			<tr>
+				<td>
 					<a href="#set">
 						<Ascua::Prism::Inline @language="csharp" @code="await db.Set(key, value)" />
 					</a>
@@ -198,7 +206,7 @@
 			<tr>
 				<td>
 					<a href="#select">
-						<Ascua::Prism::Inline @language="csharp" @code="await db.Select(resource)" />
+						<Ascua::Prism::Inline @language="csharp" @code="await db.Select<T>(resource)" />
 					</a>
 				</td>
 				<td>Selects all records in a table, or a specific record</td>
@@ -206,7 +214,7 @@
 			<tr>
 				<td>
 					<a href="#create">
-						<Ascua::Prism::Inline @language="csharp" @code="await db.Create(resource, data)" />
+						<Ascua::Prism::Inline @language="csharp" @code="await db.Create<T>(resource, data)" />
 					</a>
 				</td>
 				<td>Creates a record in the database</td>
@@ -214,7 +222,7 @@
 			<tr>
 				<td>
 					<a href="#upsert">
-						<Ascua::Prism::Inline @language="csharp" @code="await db.Upsert(data)" />
+						<Ascua::Prism::Inline @language="csharp" @code="await db.Upsert<T>(data)" />
 					</a>
 				</td>
 				<td>Creates or updates a specific record</td>
@@ -222,7 +230,7 @@
 			<tr>
 				<td>
 					<a href="#merge">
-						<Ascua::Prism::Inline @language="csharp" @code="await db.Merge(resource, data)" />
+						<Ascua::Prism::Inline @language="csharp" @code="await db.Merge<T>(resource, data)" />
 					</a>
 				</td>
 				<td>Modifies all records in a table, or a specific record</td>
@@ -835,6 +843,39 @@
 
 <Layout::Gap small />
 
+<Layout::Group {{waypoint "info"}}>
+
+	<Layout::Text text-l text-f>
+		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Info<T>()" /></h3>
+		<p>This method returns the record of an authenticated scope user.</p>
+		<Layout::Table>
+			<table>
+				<thead>
+					<tr>
+						<th w-40>Arguments</th>
+						<th w-60>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<code>cancellationToken</code>
+							<l faint r>Optional</l>
+						</td>
+						<td>
+							The cancellationToken enables graceful cancellation of asynchronous operations.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</Layout::Table>
+		<Code @name="docs/integration/libraries/dotnet/info.cs" />
+	</Layout::Text>
+
+</Layout::Group>
+
+<Layout::Gap small />
+
 <Layout::Group {{waypoint "set"}}>
 
 	<Layout::Text text-l text-f>
@@ -982,7 +1023,7 @@
 <Layout::Group {{waypoint "select"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Select(resource)" /></h3>
+		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Select<T>(resource)" /></h3>
 		<p>Selects all records in a table, or a specific record, from the database.</p>
 		<Layout::Table>
 			<table>
@@ -1024,7 +1065,7 @@
 <Layout::Group {{waypoint "create"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Create(resource, data)" /></h3>
+		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Create<T>(resource, data)" /></h3>
 		<p>Creates a record in the database.</p>
 		<Layout::Table>
 			<table>
@@ -1075,7 +1116,7 @@
 <Layout::Group {{waypoint "upsert"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Upsert(data)" /></h3>
+		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Upsert<T>(data)" /></h3>
 		<p>Creates or updates a specific record.</p>
 		<blockquote yellow text="Note">This function creates a new document / record or replaces the current one with the specified data.</blockquote>
 		<Layout::Table>
@@ -1118,7 +1159,7 @@
 <Layout::Group {{waypoint "patch"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Merge(resource, data)" /></h3>
+		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Merge<T>(resource, data)" /></h3>
 		<p>Modifies all records in a table, or a specific record.</p>
 		<Layout::Table>
 			<table>
